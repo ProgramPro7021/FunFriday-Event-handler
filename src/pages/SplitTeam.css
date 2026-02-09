@@ -1,0 +1,293 @@
+/* =========================
+   PAGE WRAPPER
+========================= */
+.split-team {
+  max-width: 1100px;
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* =========================
+   HEADING
+========================= */
+.split-team h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   TOP SECTION
+========================= */
+.main {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+/* =========================
+   CONTROLS
+========================= */
+.controls {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input-row,
+.settings-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-row input {
+  min-width: 220px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-row input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.settings-row p {
+  margin: 0;
+  font-weight: 600;
+  color: #374151;
+}
+
+.settings-row input {
+  width: 80px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+/* =========================
+   INSTRUCTIONS
+========================= */
+.instructions-box {
+  background: #0f172a;
+  border-radius: 16px;
+  padding: 22px;
+  color: #e5e7eb;
+  max-width: 420px;
+}
+
+.instructions-box h2 {
+  font-size: 1.2rem;
+  color: #38bdf8;
+  margin-bottom: 14px;
+}
+
+.instructions-list {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.instructions-list li {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #cbd5f5;
+}
+
+.instructions-list strong {
+  color: #facc15;
+}
+
+/* =========================
+   OUTPUT GRID
+========================= */
+.content-grid {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+/* =========================
+   PLAYERS
+========================= */
+.players-box {
+  flex: 1;
+  min-width: 260px;
+}
+
+.players-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.players-list li {
+  background: #e5e7eb;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* =========================
+   TEAMS
+========================= */
+.teams-box {
+  flex: 2;
+  min-width: 320px;
+}
+
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.team-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+}
+
+.team-card h3 {
+  margin-bottom: 10px;
+}
+
+.team-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.team-card li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+/* =========================
+   PLAYED STATE
+========================= */
+.played {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.played-btn {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: #10b981;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.played-btn:hover {
+  background: #059669;
+}
+
+/* =========================
+   SCORES
+========================= */
+.scores-box {
+  flex: 1;
+  min-width: 240px;
+  background: #ecfdf5;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+}
+
+.scores-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.scores-box li {
+  padding: 6px 0;
+  font-weight: 600;
+}
+
+/* =========================
+   WINNER
+========================= */
+.winner-box {
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #065f46;
+  position: relative;
+}
+
+.balloons {
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+}
+
+.balloon {
+  width: 30px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  animation: floatUp 4s ease-in infinite;
+}
+
+.balloon.red { background: #ef4444; left: 20%; }
+.balloon.blue { background: #3b82f6; left: 50%; animation-delay: 1s; }
+.balloon.green { background: #22c55e; left: 80%; animation-delay: 2s; }
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-120px); opacity: 0; }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-grid {
+    flex-direction: column;
+  }
+
+  .players-box,
+  .teams-box,
+  .scores-box {
+    min-width: 100%;
+  }
+}

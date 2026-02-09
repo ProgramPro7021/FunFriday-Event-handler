@@ -1,0 +1,91 @@
+/* Page Centering */
+.stopwatch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Card */
+.stopwatch-card {
+  background: #111;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 600px;
+}
+
+/* Title */
+.stopwatch-card h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Time Display */
+.stopwatch-time-display {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00e5ff;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+/* Buttons Container */
+.stopwatch-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Base Button Style */
+.stopwatch-btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Button Colors */
+.stopwatch-btn-start {
+  background: #00c853;
+  color: #fff;
+}
+
+.stopwatch-btn-pause {
+  background: #ffab00;
+  color: #000;
+}
+
+.stopwatch-btn-reset {
+  background: #d50000;
+  color: #fff;
+}
+
+/* Hover Effects */
+.stopwatch-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Disabled Button */
+.stopwatch-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 400px) {
+  .stopwatch-card {
+    width: 90%;
+  }
+
+  .stopwatch-time-display {
+    font-size: 2.5rem;
+  }
+}
