@@ -1,0 +1,50 @@
+/* Legal.css - reduced font sizes */
+
+.legal-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.legal-page h1 {
+  font-size: 2.5rem;       /* reduced from 2.5rem */
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+.legal-page h2 {
+  font-size: 1.6rem;     /* reduced from 1.6rem */
+  margin-top: 25px;
+  margin-bottom: 12px;
+  color: #34495e;
+  border-left: 3px solid #e67e22;
+  padding-left: 8px;
+}
+
+.legal-page p {
+  font-size: 1.1rem;       /* reduced from 1.1rem */
+  margin-bottom: 16px;
+}
+
+.legal-page strong {
+  color: #2c3e50;
+}
+
+.legal-page section:last-child p {
+  text-align: center;
+  font-weight: 600;
+  color: #e67e22;
+  margin-top: 18px;
+}
+
+.legal-page h2:hover {
+  color: #d35400;
+  transition: color 0.3s ease;
+}

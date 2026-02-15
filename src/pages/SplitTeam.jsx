@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./SplitTeam.css";
-import "./buttons.css";
+
+import "../css/SplitTeam.css";  
 import Timer from "./Timer";
 
 const SplitTeam = () => {

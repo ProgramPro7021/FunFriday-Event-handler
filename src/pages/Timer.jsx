@@ -1,90 +1,106 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Timer.css";
+import "../css/Timer.css";
 
 const Timer = ({ start, onComplete }) => {
   const radius = 90;
   const circumference = 2 * Math.PI * radius;
-
-  const [minutes, setMinutes] = useState(() => {
-    return Number(localStorage.getItem("minutes")) || 1;
-  });
-  const [time, setTime] = useState(() => {
-    return Number(localStorage.getItem("time")) || 0;
-  });
-  const [isActive, setIsActive] = useState(() => {
-    return localStorage.getItem("isActive") === "true";
-  });
-  const [completedText, setCompletedText] = useState(
-    localStorage.getItem("completedText") || ""
-  );
-
-useEffect(() => {
-    if (time === 0 && isActive) {
-      setIsActive(false);
-      setCompletedText(`${minutes} minute${minutes > 1 ? "s" : ""} completed`);
-      if (onComplete) {
-        onComplete(); // tell parent timer is done
-      }
-    }
-  }, [time, isActive, minutes, onComplete]);
-
-
-
-  const totalTime = minutes * 60;
   const intervalRef = useRef(null);
 
-  /* ===== TIMER LOGIC ===== */
-  useEffect(() => {
-    if (isActive && time > 0) {
-      intervalRef.current = setInterval(() => {
-        setTime((prev) => prev - 1);
-      }, 1000);
+  /* =========================
+     INITIAL STATE FROM STORAGE
+  ========================= */
+  const [minutes, setMinutes] = useState(
+    () => Number(localStorage.getItem("minutes")) || 1
+  );
+
+  const [endTime, setEndTime] = useState(
+    () => Number(localStorage.getItem("endTime")) || null
+  );
+
+  const [timeLeft, setTimeLeft] = useState(() => {
+    const savedEnd = Number(localStorage.getItem("endTime"));
+    if (savedEnd) {
+      const diff = Math.floor((savedEnd - Date.now()) / 1000);
+      return diff > 0 ? diff : 0;
     }
+    return 0;
+  });
 
-    if (time === 0 && isActive) {
-      setIsActive(false);
-      setCompletedText(
-        `${minutes} minute${minutes > 1 ? "s" : ""} completed`
-      );
-    }
+  const [isActive, setIsActive] = useState(
+    () => localStorage.getItem("isActive") === "true"
+  );
 
-    return () => clearInterval(intervalRef.current);
-  }, [isActive, time, minutes]);
+  const [completedText, setCompletedText] = useState(
+    () => localStorage.getItem("completedText") || ""
+  );
 
-  /* ===== RESPOND TO PROP ===== */
+  /* =========================
+     START TIMER FROM PARENT
+  ========================= */
   useEffect(() => {
     if (start) {
-      // external trigger from SplitTeam
-      setTime(minutes * 60);
+      const newEndTime = Date.now() + minutes * 60 * 1000;
+      setEndTime(newEndTime);
+      setTimeLeft(minutes * 60);
       setCompletedText("");
       setIsActive(true);
-    } else {
-      // if parent resets
-      setIsActive(false);
-      setTime(0);
-      setCompletedText("");
     }
-  }, [start, minutes]);
+  }, [start]);
 
-  /* ===== PERSIST STATE ===== */
+  /* =========================
+     TIMER LOGIC
+  ========================= */
   useEffect(() => {
-    localStorage.setItem("time", time);
+    if (!isActive || !endTime) return;
+
+    intervalRef.current = setInterval(() => {
+      const diff = Math.floor((endTime - Date.now()) / 1000);
+
+      if (diff <= 0) {
+        clearInterval(intervalRef.current);
+        setTimeLeft(0);
+        setIsActive(false);
+        setCompletedText(
+          `${minutes} minute${minutes > 1 ? "s" : ""} completed`
+        );
+
+        if (onComplete) onComplete();
+      } else {
+        setTimeLeft(diff);
+      }
+    }, 1000);
+
+    return () => clearInterval(intervalRef.current);
+  }, [isActive, endTime, minutes, onComplete]);
+
+  /* =========================
+     PERSIST STATE
+  ========================= */
+  useEffect(() => {
     localStorage.setItem("minutes", minutes);
+    localStorage.setItem("endTime", endTime || "");
     localStorage.setItem("isActive", isActive);
     localStorage.setItem("completedText", completedText);
-  }, [time, minutes, isActive, completedText]);
+  }, [minutes, endTime, isActive, completedText]);
 
+  /* =========================
+     FORMAT TIME
+  ========================= */
   const formatTime = (seconds) => {
     const m = String(Math.floor(seconds / 60)).padStart(2, "0");
     const s = String(seconds % 60).padStart(2, "0");
     return `${m}:${s}`;
   };
 
+  const totalTime = minutes * 60;
   const offset =
-    time > 0
-      ? circumference - (time / totalTime) * circumference
+    timeLeft > 0
+      ? circumference - (timeLeft / totalTime) * circumference
       : circumference;
 
+  /* =========================
+     JSX
+  ========================= */
   return (
     <div className="timer-container">
       <div className="ring-wrapper" style={{ width: 220, height: 220 }}>
@@ -94,9 +110,9 @@ useEffect(() => {
             r="90"
             cx="110"
             cy="110"
-            className={`ring-progress
-              ${isActive ? "running" : ""}
-              ${time <= 10 && time > 0 ? "danger" : ""}
+            className={`ring-progress 
+              ${isActive ? "running" : ""} 
+              ${timeLeft <= 10 && timeLeft > 0 ? "danger" : ""} 
               ${completedText ? "completed" : ""}
             `}
             style={{
@@ -110,7 +126,7 @@ useEffect(() => {
           {completedText ? (
             <div className="completed-inside">{completedText}</div>
           ) : (
-            formatTime(time)
+            formatTime(timeLeft)
           )}
         </div>
       </div>
@@ -121,44 +137,49 @@ useEffect(() => {
           min="1"
           value={minutes}
           onChange={(e) => setMinutes(Number(e.target.value))}
-          className="input-minutes"
           disabled={isActive}
+          className="input-minutes"
         />
         <span>minutes</span>
       </div>
 
-      {/* Keep local buttons too if you want manual control */}
-   <div className="buttons">
-  <button
-    className="primary"
-    onClick={() => {
-      setTime(minutes * 60);
-      setCompletedText("");
-      setIsActive(true);
-    }}
-    disabled={isActive}
-  >
-    Start
-  </button>
+      <div className="buttons">
+        <button
+          className="primary"
+          onClick={() => {
+            const newEndTime = Date.now() + minutes * 60 * 1000;
+            setEndTime(newEndTime);
+            setTimeLeft(minutes * 60);
+            setCompletedText("");
+            setIsActive(true);
+          }}
+          disabled={isActive}
+        >
+          Start
+        </button>
 
-  <button
-    className="danger"
-    onClick={() => {
-      setIsActive(false);
-      setTime(0);
-      setCompletedText("");
-    }}
-  >
-    Reset
-  </button>
-</div>
-<button
-  className="secondary"
-  onClick={() => setIsActive(false)}
-  disabled={!isActive}
->
-  Pause
-</button>
+        <button
+          className="secondary"
+          onClick={() => setIsActive(false)}
+          disabled={!isActive}
+        >
+          Pause
+        </button>
+
+        <button
+          className="danger"
+          onClick={() => {
+            clearInterval(intervalRef.current);
+            setIsActive(false);
+            setTimeLeft(0);
+            setEndTime(null);
+            setCompletedText("");
+            localStorage.removeItem("endTime");
+          }}
+        >
+          Reset
+        </button>
+      </div>
     </div>
   );
 };
