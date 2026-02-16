@@ -1,0 +1,116 @@
+/* ================= ROOT VARIABLES ================= */
+:root {
+  --primary: #7c3aed;
+  --secondary: #2563eb;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --bg-light: #f9fafb;
+  --radius: 14px;
+  --transition: 0.3s ease;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* ================= BASE ================= */
+.legal-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+.legal-page h1 {
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ================= SECTION ================= */
+.legal-page section {
+  background: white;
+  padding: 28px;
+  margin-bottom: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.legal-page section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.12);
+}
+
+.legal-page h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.legal-page h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+/* ================= PARAGRAPHS ================= */
+.legal-page p {
+  font-size: 16px;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+
+/* ================= LIST ================= */
+.legal-page ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.legal-page li {
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  position: relative;
+}
+
+.legal-page li::before {
+  content: "✔";
+  color: var(--primary);
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* ================= FINAL NOTE ================= */
+.final-note {
+  text-align: center;
+  background: var(--bg-light);
+  border: 1px solid #e5e7eb;
+}
+
+.final-note p {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .legal-page {
+    padding: 40px 15px;
+  }
+
+  .legal-page h1 {
+    font-size: 32px;
+  }
+
+  .legal-page h2 {
+    font-size: 20px;
+  }
+}

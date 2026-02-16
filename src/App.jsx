@@ -13,7 +13,13 @@ import Ideas from "./games/ideas";
 import Home from "./pages/home";
 import "./App.css";
 import RapidFire from "./newgames/rapidfire";
-
+import EmojiGuess from "./newgames/EmojiGuess";
+import  DumbCharades from "./newgames/DumbCharades";
+import Memory from "./newgames/memory";
+import Sketch from "./newgames/sketch";
+import Fastestfinger from "./newgames/fastestfinger";
+import Songguess from "./newgames/songguess";
+import Wordbuilder from "./newgames/wordbuilder";
 function App() {
   return (
     <>
@@ -31,6 +37,14 @@ function App() {
           <Route path="/ideas" element={<Ideas />} /> 
           <Route path="/" element={<Home />} />
           <Route path="/rapidfire" element={<RapidFire />} />
+          <Route path="/emoji" element={<EmojiGuess />} />
+          <Route path="/dumbCharades" element={<DumbCharades />} />
+
+          <Route path="/memory" element={<Memory />} />
+          <Route path="/sketch" element={<Sketch />} />
+          <Route path="/fastestfinger" element={<Fastestfinger />} />
+          <Route path="/songguess" element={<Songguess />} />
+          <Route path="/wordbuilder" element={<Wordbuilder />} />
         </Routes>
       </main>
       <Footer />

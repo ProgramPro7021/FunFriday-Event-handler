@@ -8,17 +8,17 @@ const fadeUp = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6 }
-  }
+    transition: { duration: 0.6 },
+  },
 };
 
 const staggerContainer = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2
-    }
-  }
+      staggerChildren: 0.2,
+    },
+  },
 };
 
 const Home = () => {
@@ -32,37 +32,36 @@ const Home = () => {
     },
     {
       title: "👥 Instant Team Split",
-      description:
-        "Automatically divide participants into balanced teams.",
+      description: "Automatically divide participants into balanced teams.",
     },
     {
       title: "⏱ Built-in Timer",
-      description:
-        "Manage rounds smoothly with built-in countdown timers.",
+      description: "Manage rounds smoothly with built-in countdown timers.",
     },
   ];
 
   const games = [
     {
-      title: "Rapid Fire Quiz",
-      description: "Answer maximum questions in 60 seconds.",
-      path: "/rapidfire",
+      title: "Emoji Guess",
+      description: "Guess movies and phrases using emojis.",
+      path: "/emoji",
     },
+
     {
       title: "Dumb Charades",
       description: "Act and guess movies without speaking.",
-      path: "/dumb-charades",
+      path: "/dumbCharades",
     },
+
     {
-      title: "Emoji Guess",
-      description: "Guess movies and phrases using emojis.",
-      path: "/emoji-guess",
+      title: "Rapid Fire",
+      description: "Quick-fire questions to test knowledge.",
+      path: "/rapidfire",
     },
   ];
 
   return (
     <div className="home">
-
       {/* ================= HERO ================= */}
       <section className="hero">
         <motion.div
@@ -76,15 +75,12 @@ const Home = () => {
           </motion.h1>
 
           <motion.p variants={fadeUp}>
-            Organize engaging team games, split teams instantly,
-            and manage countdown timers effortlessly —
-            all in one simple platform.
+            Organize engaging team games, split teams instantly, and manage
+            countdown timers effortlessly — all in one simple platform.
           </motion.p>
 
           <motion.div className="hero-buttons" variants={fadeUp}>
-            <button onClick={() => navigate("/ideas")}>
-              🎮 Explore Games
-            </button>
+            <button onClick={() => navigate("/ideas")}>🎮 Explore Games</button>
 
             <button
               className="secondary"
@@ -102,167 +98,304 @@ const Home = () => {
         </motion.div>
       </section>
 
+      {/* ================= education ================= */}
+      <section className="education">
+        <div className="section-header">
+          <h2>Why Team Building Activities Matter in Modern Workplaces</h2>
+        </div>
 
+        <div className="education-content">
+          <p>
+            Team building activities are more than just entertainment. In modern
+            workplaces, structured group games improve communication, reduce
+            stress, and strengthen collaboration between departments. When
+            employees engage in friendly competition, it builds trust and
+            encourages open interaction.
+          </p>
+
+          <p>
+            Regular fun sessions like Fun Friday activities help break routine
+            work patterns and improve morale. Short interactive games stimulate
+            quick thinking, leadership skills, and decision-making under
+            pressure.
+          </p>
+
+          <p>
+            Whether you manage a startup team, corporate office, or classroom,
+            structured group games can significantly increase productivity and
+            workplace happiness.
+          </p>
+        </div>
+      </section>
 
       {/* ================= ABOUT ================= */}
-<section className="about">
-  <motion.div
-    className="about-container"
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-    variants={staggerContainer}
-  >
-    <motion.h2 variants={fadeUp}>
-      What Is FunFriday?
-    </motion.h2>
+      <section className="about">
+        <motion.div
+          className="about-container"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          <motion.h2 variants={fadeUp}>What Is FunFriday?</motion.h2>
 
-    <motion.p variants={fadeUp} className="about-description">
-      FunFriday is a simple platform designed to make team bonding effortless.
-      Whether you're organizing office activities, classroom competitions,
-      or casual friend meetups — we provide ready-to-play games,
-      instant team splitting, and built-in timers to run everything smoothly.
-    </motion.p>
+          <motion.p variants={fadeUp} className="about-description">
+            FunFriday is a simple platform designed to make team bonding
+            effortless. Whether you're organizing office activities, classroom
+            competitions, or casual friend meetups — we provide ready-to-play
+            games, instant team splitting, and built-in timers to run everything
+            smoothly.
+          </motion.p>
 
-    <motion.div className="about-boxes" variants={staggerContainer}>
-      <motion.div className="about-box" variants={fadeUp}>
-        <h3>🎯 Easy Game Hosting</h3>
-        <p>
-          Launch engaging games in seconds without setup complexity.
-        </p>
-      </motion.div>
+          <motion.div className="about-boxes" variants={staggerContainer}>
+            <motion.div className="about-box" variants={fadeUp}>
+              <h3>🎯 Easy Game Hosting</h3>
+              <p>Launch engaging games in seconds without setup complexity.</p>
+            </motion.div>
 
-      <motion.div className="about-box" variants={fadeUp}>
-        <h3>⚡ Fast & Simple</h3>
-        <p>
-          No accounts, no delays — just open and start playing instantly.
-        </p>
-      </motion.div>
+            <motion.div className="about-box" variants={fadeUp}>
+              <h3>⚡ Fast & Simple</h3>
+              <p>
+                No accounts, no delays — just open and start playing instantly.
+              </p>
+            </motion.div>
 
-      <motion.div className="about-box" variants={fadeUp}>
-        <h3>🤝 Perfect for Teams</h3>
-        <p>
-          Ideal for offices, schools, and group events.
-        </p>
-      </motion.div>
-    </motion.div>
-  </motion.div>
-</section>
-
+            <motion.div className="about-box" variants={fadeUp}>
+              <h3>🤝 Perfect for Teams</h3>
+              <p>Ideal for offices, schools, and group events.</p>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </section>
 
       {/* ================= FEATURES ================= */}
-    <section className="features">
-  <div className="section-header">
-    <h2>Key Features</h2>
-    <p>Everything you need to run fun and competitive team games</p>
-  </div>
+      <section className="features">
+        <div className="section-header">
+          <h2>Key Features</h2>
+          <p>Everything you need to run fun and competitive team games</p>
+        </div>
 
-  <motion.div
-    className="feature-grid"
-    variants={staggerContainer}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-  >
-    {features.map((feature, index) => (
-      <motion.div
-        key={index}
-        className="feature-card"
-        variants={fadeUp}
-        whileHover={{ y: -6 }}
-      >
-        <h3>{feature.title}</h3>
-        <p>{feature.description}</p>
-      </motion.div>
-    ))}
-  </motion.div>
-</section>
+        <motion.div
+          className="feature-grid"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              className="feature-card"
+              variants={fadeUp}
+              whileHover={{ y: -6 }}
+            >
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </section>
+
+      {/* ================= guide ================= */}
+      <section className="guide">
+        <div className="section-header">
+          <h2>How to Organize a Perfect Fun Friday Session</h2>
+        </div>
+
+        <div className="guide-content">
+          <h3>1. Choose the Right Game</h3>
+          <p>
+            Select games based on team size and energy level. Quick rounds like
+            Rapid Fire are ideal for fast-paced teams, while games like Dumb
+            Charades encourage creativity.
+          </p>
+
+          <h3>2. Split Teams Fairly</h3>
+          <p>
+            Balanced teams create healthy competition. Use instant team split
+            tools to randomly divide participants for fairness.
+          </p>
+
+          <h3>3. Set Clear Rules</h3>
+          <p>
+            Before starting, explain rules and time limits clearly to avoid
+            confusion during gameplay.
+          </p>
+
+          <h3>4. Encourage Participation</h3>
+          <p>
+            The goal is engagement. Ensure everyone gets a chance to participate
+            and contribute.
+          </p>
+        </div>
+      </section>
 
       {/* ================= POPULAR ================= */}
-     <section className="popular">
-  <div className="section-header">
-    <h2>Popular Games</h2>
-    <p>Quick, fun, and perfect for team competitions</p>
-  </div>
+      <section className="popular">
+        <div className="section-header">
+          <h2>Popular Games</h2>
+          <p>Quick, fun, and perfect for team competitions</p>
+        </div>
 
-  <motion.div
-    className="game-preview"
-    variants={staggerContainer}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-  >
-    {games.map((game, index) => (
-      <motion.div
-        key={index}
-        className="game-card"
-        variants={fadeUp}
-        whileHover={{ scale: 1.05 }}
-      >
-        <h3>{game.title}</h3>
-        <p>{game.description}</p>
-        <button onClick={() => navigate(game.path)}>
-          Play Now
-        </button>
-      </motion.div>
-    ))}
-  </motion.div>
-</section>
-
+        <motion.div
+          className="game-preview"
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {games.map((game, index) => (
+            <motion.div
+              key={index}
+              className="game-card"
+              variants={fadeUp}
+              whileHover={{ scale: 1.05 }}
+            >
+              <h3>{game.title}</h3>
+              <p>{game.description}</p>
+              <button onClick={() => navigate(game.path)}>Play Now</button>
+            </motion.div>
+          ))}
+        </motion.div>
+      </section>
 
       {/* ================= CTA ================= */}
-  {/* ================= CTA ================= */}
-<section className="cta">
-  <motion.div
-    className="cta-container"
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
-    viewport={{ once: true }}
-  >
-    <h2>
-      Ready to Turn Your Team Into Champions? 🏆
-    </h2>
 
-    <p>
-      Launch games, split teams, and create unforgettable Friday moments —
-      all in under 30 seconds.
-    </p>
+      <section className="homepage-intro">
+        <h2>Fun Friday Emoji Collection for Work & Online Chats</h2>
 
-    <div className="cta-buttons">
-      <button
-        className="primary"
-        onClick={() => navigate("/ideas")}
-      >
-        🚀 Start Playing Now
-      </button>
+        <p>
+          Welcome to FunFriday, your ultimate destination for copy-and-paste
+          workplace-friendly emojis and expressions. Whether you're celebrating
+          a team win, reacting to a project update, or simply sharing Friday
+          excitement, our platform makes it quick and easy to add personality to
+          your digital conversations.
+        </p>
 
-      <button
-        className="secondary"
-        onClick={() => navigate("/splitTeam")}
-      >
-        👥 Split Teams First
-      </button>
-    </div>
-  </motion.div>
+        <p>
+          Modern communication happens across platforms like Slack, Microsoft
+          Teams, WhatsApp, and email. While these tools improve efficiency,
+          text-only communication can often feel impersonal. Emojis help bring
+          tone, clarity, and positivity into conversations.
+        </p>
 
-  {/* Dancing Emoji Section */}
-  <motion.div
-    className="emoji-party"
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ delay: 0.4 }}
-    viewport={{ once: true }}
-  >
-    <span>💃</span>
-    <span>🕺</span>
-    <span>🎉</span>
-    <span>🔥</span>
-    <span>🎊</span>
-  </motion.div>
-</section>
+        <p>
+          At FunFriday, we provide curated emoji collections designed
+          specifically for professional and casual digital environments. Our
+          categories include celebration emojis, motivational reactions, team
+          appreciation icons, positive vibes symbols, and Friday-themed
+          expressions.
+        </p>
 
+        <h2>Why Use Emojis at Work?</h2>
 
+        <p>
+          Studies in workplace communication suggest that adding appropriate
+          visual cues such as emojis can reduce misunderstandings and strengthen
+          team engagement. A simple thumbs-up or celebration emoji can
+          communicate tone more clearly than plain text.
+        </p>
+
+        <ul>
+          <li>Improve clarity in digital communication</li>
+          <li>Encourage team engagement</li>
+          <li>Add friendly tone to messages</li>
+          <li>Celebrate achievements quickly</li>
+          <li>Boost Friday morale</li>
+        </ul>
+
+        <h2>How FunFriday Works</h2>
+
+        <p>
+          Using FunFriday is simple. Browse categories, click on any emoji or
+          expression, and paste it directly into your chat or message. No login,
+          no downloads, and completely free to use.
+        </p>
+
+        <p>
+          Our goal is to provide a fast, clean, and reliable emoji collection
+          optimized for everyday digital communication.
+        </p>
+      </section>
+
+      {/* ================= CTA ================= */}
+      <section className="cta">
+        <motion.div
+          className="cta-container"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <h2>Ready to Turn Your Team Into Champions? 🏆</h2>
+
+          <p>
+            Launch games, split teams, and create unforgettable Friday moments —
+            all in under 30 seconds.
+          </p>
+
+          <div className="cta-buttons">
+            <button className="primary" onClick={() => navigate("/ideas")}>
+              🚀 Start Playing Now
+            </button>
+
+            <button
+              className="secondary"
+              onClick={() => navigate("/splitTeam")}
+            >
+              👥 Split Teams First
+            </button>
+          </div>
+        </motion.div>
+
+        {/* faq */}
+        <section className="faq">
+          <div className="section-header">
+            <h2>Frequently Asked Questions</h2>
+          </div>
+
+          <div className="faq-content">
+            <h3>Is FunFriday free to use?</h3>
+            <p>
+              Yes, all games on FunFriday are free and accessible directly in
+              your browser.
+            </p>
+
+            <h3>Do I need to create an account?</h3>
+            <p>
+              No signup is required. Simply open the website and start playing.
+            </p>
+
+            <h3>Can these games be used in offices?</h3>
+            <p>
+              Yes, the platform is specifically designed for corporate
+              team-building sessions.
+            </p>
+
+            <h3>Are the games suitable for classrooms?</h3>
+            <p>
+              Yes, teachers can use these interactive games for educational and
+              recreational purposes.
+            </p>
+            <p>Trusted by Teams Across Industries</p>
+          </div>
+        </section>
+
+        {/* Dancing Emoji Section */}
+        <motion.div
+          className="emoji-party"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <span>💃</span>
+          <span>🕺</span>
+          <span>🎉</span>
+          <span>🔥</span>
+          <span>🎊</span>
+        </motion.div>
+      </section>
     </div>
   );
 };

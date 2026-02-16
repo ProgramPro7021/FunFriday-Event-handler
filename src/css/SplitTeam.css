@@ -1,180 +1,103 @@
-/* =========================
-   PAGE WRAPPER
-========================= */
+/* ===============================
+   MAIN WRAPPER
+=============================== */
+
 .split-team {
   max-width: 1100px;
-  width: 100%;
-  padding: 32px;
-  box-sizing: border-box;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  margin: 60px auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #222;
+  line-height: 1.6;
 }
 
-/* =========================
-   HEADING
-========================= */
-.split-team h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #111827;
-  margin-bottom: 24px;
-  letter-spacing: 0.5px;
+/* ===============================
+   SEO SECTION
+=============================== */
+
+.seo-content {
+  margin-bottom: 60px;
 }
 
-/* =========================
-   TOP SECTION
-========================= */
-.main {
-  display: flex;
-  gap: 24px;
-  width: 100%;
-  justify-content: center;
-  margin-bottom: 32px;
+.seo-content h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
 }
 
-/* =========================
-   CONTROLS
-========================= */
-.controls {
-  background: #f9fafb;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+.seo-content h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
-.input-row,
-.settings-row {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+.seo-content p {
+  margin-bottom: 12px;
+  color: #444;
 }
 
-.input-row input {
-  min-width: 220px;
-  padding: 10px 14px;
+.seo-content ul {
+  padding-left: 20px;
+}
+
+/* ===============================
+   GAME SECTION
+=============================== */
+
+.game-section {
+  background: #f8f9fb;
+  padding: 30px;
   border-radius: 12px;
-  border: 1px solid #d1d5db;
-  font-size: 14px;
-  outline: none;
-  transition: all 0.2s ease;
+  margin-bottom: 50px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
-.input-row input:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
-}
-
-.settings-row p {
-  margin: 0;
-  font-weight: 600;
-  color: #374151;
-}
-
-.settings-row input {
-  width: 80px;
-  padding: 8px;
-  border-radius: 10px;
-  border: 1px solid #d1d5db;
-}
-
-/* =========================
-   INSTRUCTIONS
-========================= */
-.instructions-box {
-  background: #0f172a;
-  border-radius: 16px;
-  padding: 22px;
-  color: #e5e7eb;
-  max-width: 420px;
-}
-
-.instructions-box h2 {
-  font-size: 1.2rem;
-  color: #38bdf8;
-  margin-bottom: 14px;
-}
-
-.instructions-list {
-  padding-left: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.instructions-list li {
-  font-size: 0.9rem;
-  line-height: 1.45;
-  color: #cbd5f5;
-}
-
-.instructions-list strong {
-  color: #facc15;
-}
-
-/* =========================
-   OUTPUT GRID
-========================= */
-.content-grid {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-}
-
-/* =========================
-   PLAYERS
-========================= */
-.players-box {
-  flex: 1;
-  min-width: 260px;
-}
-
-.players-list {
-  list-style: none;
-  padding: 0;
+.controls {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
-.players-list li {
-  background: #e5e7eb;
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 500;
+.controls input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-/* =========================
-   TEAMS
-========================= */
-.teams-box {
-  flex: 2;
-  min-width: 320px;
+.controls button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.teams-grid {
+.controls button:hover {
+  background: #357abd;
+}
+
+/* ===============================
+   OUTPUT SECTION
+=============================== */
+
+.output-section {
+  margin-bottom: 60px;
+}
+
+.teams-display {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  gap: 20px;
 }
 
 .team-card {
   background: #ffffff;
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
 .team-card h3 {
@@ -189,105 +112,78 @@
 .team-card li {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 6px 0;
+  margin-bottom: 8px;
 }
 
-/* =========================
-   PLAYED STATE
-========================= */
-.played {
-  text-decoration: line-through;
-  opacity: 0.6;
-}
-
-.played-btn {
+.team-card button {
+  padding: 4px 8px;
   font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 8px;
-  background: #10b981;
-  color: white;
+  border-radius: 6px;
   border: none;
+  background: #ff5a5f;
+  color: white;
   cursor: pointer;
 }
 
-.played-btn:hover {
-  background: #059669;
+.team-card button:hover {
+  background: #e0484d;
 }
 
-/* =========================
-   SCORES
-========================= */
-.scores-box {
-  flex: 1;
-  min-width: 240px;
-  background: #ecfdf5;
-  border-radius: 16px;
-  padding: 16px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
-}
-
-.scores-box ul {
-  list-style: none;
-  padding: 0;
-}
-
-.scores-box li {
-  padding: 6px 0;
-  font-weight: 600;
-}
-
-/* =========================
+/* ===============================
    WINNER
-========================= */
+=============================== */
+
+.winner-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+.winner-btn:hover {
+  background: #218838;
+}
+
 .winner-box {
-  margin-top: 14px;
-  font-size: 18px;
-  font-weight: 700;
-  color: #065f46;
-  position: relative;
+  margin-top: 20px;
+  padding: 15px;
+  background: #e6f7ff;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
 }
 
-.balloons {
-  position: relative;
-  height: 120px;
-  overflow: hidden;
+/* ===============================
+   FAQ SECTION
+=============================== */
+
+.faq-section h2 {
+  margin-bottom: 15px;
 }
 
-.balloon {
-  width: 30px;
-  height: 40px;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 0;
-  animation: floatUp 4s ease-in infinite;
+.faq-section h3 {
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
-.balloon.red { background: #ef4444; left: 20%; }
-.balloon.blue { background: #3b82f6; left: 50%; animation-delay: 1s; }
-.balloon.green { background: #22c55e; left: 80%; animation-delay: 2s; }
-
-@keyframes floatUp {
-  from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(-120px); opacity: 0; }
+.faq-section p {
+  margin-bottom: 10px;
+  color: #555;
 }
 
-/* =========================
+/* ===============================
    RESPONSIVE
-========================= */
+=============================== */
+
 @media (max-width: 768px) {
-  .main {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .content-grid {
+  .controls {
     flex-direction: column;
   }
 
-  .players-box,
-  .teams-box,
-  .scores-box {
-    min-width: 100%;
+  .split-team {
+    padding: 30px 15px;
   }
 }

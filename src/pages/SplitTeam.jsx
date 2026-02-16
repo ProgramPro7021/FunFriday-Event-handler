@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from "react";
-
-import "../css/SplitTeam.css";  
+import "../css/SplitTeam.css";
 import Timer from "./Timer";
 
 const SplitTeam = () => {
   const [playerName, setPlayerName] = useState("");
   const [players, setPlayers] = useState(
-    () => JSON.parse(localStorage.getItem("players")) || [],
+    () => JSON.parse(localStorage.getItem("players")) || []
   );
   const [teams, setTeams] = useState(
-    () => JSON.parse(localStorage.getItem("teams")) || [],
+    () => JSON.parse(localStorage.getItem("teams")) || []
   );
   const [numTeams, setNumTeams] = useState(
-    () => Number(localStorage.getItem("numTeams")) || 2,
+    () => Number(localStorage.getItem("numTeams")) || 2
   );
   const [teamScores, setTeamScores] = useState(
-    () => JSON.parse(localStorage.getItem("teamScores")) || [],
+    () => JSON.parse(localStorage.getItem("teamScores")) || []
   );
   const [winner, setWinner] = useState(null);
   const [startTimer, setStartTimer] = useState(false);
@@ -45,20 +44,12 @@ const SplitTeam = () => {
   ========================= */
   const addPlayer = () => {
     const trimmedName = playerName.trim();
-
-    if (!trimmedName) {
-      alert("Please enter a player name!");
-      return;
-    }
+    if (!trimmedName) return alert("Please enter a player name!");
 
     const exists = players.some(
-      (p) => p.name.toLowerCase() === trimmedName.toLowerCase(),
+      (p) => p.name.toLowerCase() === trimmedName.toLowerCase()
     );
-
-    if (exists) {
-      alert("This player is already added!");
-      return;
-    }
+    if (exists) return alert("Player already exists!");
 
     setPlayers([
       ...players,
@@ -84,12 +75,8 @@ const SplitTeam = () => {
      SPLIT TEAMS
   ========================= */
   const splitTeams = () => {
-    if (players.length < numTeams) {
-      alert("Not enough players for selected number of teams");
-      return;
-    }
-
-    if (numTeams < 2) return;
+    if (players.length < numTeams)
+      return alert("Not enough players for selected teams");
 
     const shuffled = shuffleArray(players);
     const newTeams = Array.from({ length: numTeams }, () => []);
@@ -107,53 +94,41 @@ const SplitTeam = () => {
      MARK PLAYED
   ========================= */
   const markPlayed = (teamIndex, playerIndex) => {
-    const scoreInput = prompt("Enter score for this player:");
+    const scoreInput = prompt("Enter score:");
     const score = Number(scoreInput);
 
-    if (isNaN(score) || score < 0) {
-      alert("Please enter a valid score");
-      return;
-    }
+    if (isNaN(score) || score < 0)
+      return alert("Enter valid score");
 
     const updatedTeams = teams.map((team, i) =>
       team.map((player, j) =>
         i === teamIndex && j === playerIndex
           ? { ...player, played: true, score }
-          : player,
-      ),
+          : player
+      )
     );
 
     setTeams(updatedTeams);
 
     const updatedScores = [...teamScores];
-    updatedScores[teamIndex] = (updatedScores[teamIndex] || 0) + score;
-
+    updatedScores[teamIndex] += score;
     setTeamScores(updatedScores);
   };
 
-  /* =========================
-     RESET TEAMS
-  ========================= */
-  const resetTeams = () => {
-    setTeams([]);
-    setTeamScores([]);
-    setPlayers([]);
-    setWinner(null);
+  const checkWinner = () => {
+    const maxScore = Math.max(...teamScores);
+    const winners = teamScores.filter((s) => s === maxScore);
 
-    localStorage.removeItem("teams");
-    localStorage.removeItem("teamScores");
-    localStorage.removeItem("players");
+    if (winners.length > 1) setWinner("Draw");
+    else setWinner(`Team ${teamScores.indexOf(maxScore) + 1}`);
   };
 
-  /* =========================
-     CHECK WINNER
-  ========================= */
-  const checkWinner = () => {
-    if (teamScores.length < 2) return;
-
-    if (teamScores[0] > teamScores[1]) setWinner("Team 1");
-    else if (teamScores[1] > teamScores[0]) setWinner("Team 2");
-    else setWinner("Draw");
+  const resetAll = () => {
+    setPlayers([]);
+    setTeams([]);
+    setTeamScores([]);
+    setWinner(null);
+    localStorage.clear();
   };
 
   /* =========================
@@ -161,174 +136,128 @@ const SplitTeam = () => {
   ========================= */
   return (
     <div className="split-team">
-      <h1>Split Your Team</h1>
 
-      <div className="main">
-        {/* Instructions */}
-        <div className="instructions-box">
-          <h2>How to Use</h2>
-          <ol className="instructions-list">
-            <li>
-              <strong>Add Players:</strong> Enter name and click Add.
-            </li>
-            <li>
-              <strong>Set Teams:</strong> Choose number of teams.
-            </li>
-            <li>
-              <strong>Split:</strong> Click Split to divide players.
-            </li>
-             <li>
-              <strong>Select time:</strong> Like 1 min 2 min etc
-            </li>
-            <li>
-               
-              <strong>Start Timer:</strong> Start the player activiety and timer
-            </li>
+      {/* ================= SEO SECTION ================= */}
+      <section className="seo-content">
+        <h1>Random Team Generator & Split Team Tool</h1>
+        <p>
+          Easily split players into random teams using our free online Team Generator.
+          Perfect for office games, classroom activities, sports matches, and
+          Fun Friday sessions.
+        </p>
 
+        <h2>How to Use the Team Split Tool</h2>
+        <ul>
+          <li>Add player names</li>
+          <li>Select number of teams</li>
+          <li>Click split to generate random teams</li>
+          <li>Track scores and declare a winner</li>
+        </ul>
 
-            <li>
-              <strong>Winner:</strong> Click Check Winner.
-            </li>
-            <li>
-              <strong>Reset:</strong> Reset Teams or Reset All.
-            </li>
-          
-          </ol>
-        </div>
+        <h2>Why Use a Random Team Generator?</h2>
+        <p>
+          Random team generators ensure fairness, remove bias, and create
+          balanced groups instantly. This tool is ideal for events, team
+          building sessions, and friendly competitions.
+        </p>
+      </section>
 
-        {/* Controls */}
+      {/* ================= GAME CONTROLS ================= */}
+      <section className="game-section">
+
         <div className="controls">
-          <div className="input-row">
-            <input
-              type="text"
-              placeholder="Enter player name"
-              value={playerName}
-              onChange={(e) => setPlayerName(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && addPlayer()}
-            />
+          <input
+            type="text"
+            placeholder="Enter player name"
+            value={playerName}
+            onChange={(e) => setPlayerName(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && addPlayer()}
+          />
 
-            <button onClick={addPlayer} className="button-82-pushable">
-              <span className="button-82-shadow"></span>
-              <span className="button-82-edge"></span>
-              <span className="button-82-front text">Add</span>
-            </button>
-          </div>
+          <button onClick={addPlayer}>Add Player</button>
 
-          <div className="settings-row">
-            <p>Number of teams</p>
-            <input
-              type="number"
-              min="2"
-              max="10"
-              value={numTeams}
-              onChange={(e) => setNumTeams(Number(e.target.value))}
-            />
+          <input
+            type="number"
+            min="2"
+            value={numTeams}
+            onChange={(e) => setNumTeams(Number(e.target.value))}
+          />
 
-            <button onClick={splitTeams} className="button-82-pushable">
-              <span className="button-82-front text">🎲 Split</span>
-            </button>
-
-            <button onClick={resetTeams} className="button-82-pushable">
-              <span className="button-82-front text">🗑️ Reset Teams</span>
-            </button>
-
-            <button
-              onClick={() => {
-                setPlayers([]);
-                setTeams([]);
-                setTeamScores([]);
-                setWinner(null);
-                localStorage.clear();
-              }}
-              className="button-82-pushable"
-            >
-              <span className="button-82-front text">🔄 Reset All</span>
-            </button>
-          </div>
-        </div>
-<div className="Timing"> 
-    <Timer
-  start={startTimer}
-  onComplete={() => {
-    if (pendingPlayer) {
-      markPlayed(pendingPlayer.teamIndex, pendingPlayer.playerIndex);
-      setPendingPlayer(null);
-    }
-    setStartTimer(false); // reset timer
-  }}
-
-/>
-</div>
-
-      </div>
-
-      {/* OUTPUT */}
-      <div className="content-grid">
-        <div className="players-box">
-          <h2>Players</h2>
-          <ul className="players-list">
-            {players.map((p) => (
-              <li key={p.id}>{p.name}</li>
-            ))}
-          </ul>
+          <button onClick={splitTeams}>Split Teams</button>
+          <button onClick={resetAll}>Reset All</button>
         </div>
 
-        <div className="teams-box">
-          <h2>Teams</h2>
-          <div className="teams-grid two-columns">
-            {teams.map((team, i) => (
-              <div className="team-card" key={i}>
-                <h3>Team {i + 1}</h3>
-                <ul>
-                  {team.map((p, j) => (
-                    <li key={p.id} className={p.played ? "played" : ""}>
-                      {p.name} {p.played && `(Score: ${p.score})`}
-                      {!p.played && (
-                        <button
-                          className="played-btn"
-                          onClick={() => {
-                            setPendingPlayer({ teamIndex: i, playerIndex: j });
-                            setStartTimer(true); // just start timer
-                          }}
-                        >
-                          Start timer
-                        </button>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Timer
+          start={startTimer}
+          onComplete={() => {
+            if (pendingPlayer) {
+              markPlayed(pendingPlayer.teamIndex, pendingPlayer.playerIndex);
+              setPendingPlayer(null);
+            }
+            setStartTimer(false);
+          }}
+        />
+      </section>
 
-        <div className="scores-box">
-          <h2>Scores</h2>
+      {/* ================= OUTPUT ================= */}
+      <section className="output-section">
 
-          <ul>
-            {teamScores.map((score, i) => (
-              <li key={i}>
-                Team {i + 1}: {score}
-              </li>
-            ))}
-          </ul>
-
-          <button onClick={checkWinner} className="button-82-pushable">
-            <span className="button-82-front text">🏆 Check Winner</span>
-          </button>
-
-          {winner && (
-            <div className="winner-box">
-              {winner === "Draw" ? "It's a Draw!" : `${winner} Wins!`}
-              <div className="balloons">
-                <div className="balloon red"></div>
-                <div className="balloon blue"></div>
-                <div className="balloon green"></div>
-              </div>
+        <div className="teams-display">
+          {teams.map((team, i) => (
+            <div className="team-card" key={i}>
+              <h3>Team {i + 1}</h3>
+              <ul>
+                {team.map((p, j) => (
+                  <li key={p.id}>
+                    {p.name}
+                    {!p.played && (
+                      <button
+                        onClick={() => {
+                          setPendingPlayer({ teamIndex: i, playerIndex: j });
+                          setStartTimer(true);
+                        }}
+                      >
+                        Start Timer
+                      </button>
+                    )}
+                  </li>
+                ))}
+              </ul>
+              <p>Score: {teamScores[i] || 0}</p>
             </div>
-          )}
+          ))}
         </div>
-      </div>
+
+        {teams.length > 0 && (
+          <button className="winner-btn" onClick={checkWinner}>
+            Check Winner
+          </button>
+        )}
+
+        {winner && (
+          <div className="winner-box">
+            {winner === "Draw"
+              ? "It's a Draw!"
+              : `${winner} Wins! 🎉`}
+          </div>
+        )}
+      </section>
+
+      {/* ================= FAQ ================= */}
+      <section className="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>Is this team generator free?</h3>
+        <p>Yes, this tool is completely free to use.</p>
+
+        <h3>Can I use it for classroom activities?</h3>
+        <p>Yes. Teachers use this tool to create balanced student teams.</p>
+
+        <h3>Does it ensure fair random distribution?</h3>
+        <p>
+          Yes, players are shuffled randomly before being assigned to teams.
+        </p>
+      </section>
     </div>
   );
 };

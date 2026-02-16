@@ -16,9 +16,10 @@ const Footer = () => {
         {/* Navigation Links */}
         <div className="footer-links">
           <Link to="/about">About</Link>
+           <Link to="/contact">Contact us</Link>
           <Link to="/disclaimer">Disclaimer</Link>
           <Link to="/privacy">Privacy Policy</Link>
-          <Link to="/terms">Terms</Link>
+          <Link to="/terms">Terms & Conditions</Link>
         </div>
 
         {/* Social Media Icons */}
