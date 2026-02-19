@@ -1,0 +1,205 @@
+/* =====================================
+   FASTEST FINGER - Modern Dark Theme
+===================================== */
+
+.fastest-page {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-primary, #f8fafc);
+  line-height: 1.7;
+}
+
+.fastest-content {
+  margin-bottom: 60px;
+}
+
+.fastest-content h1, .fastest-content h2 {
+  color: var(--text-primary, #f8fafc);
+}
+
+.fastest-content h1 { font-size: 30px; margin-bottom: 20px; }
+.fastest-content h2 { font-size: 22px; margin-top: 35px; margin-bottom: 12px; }
+.fastest-content p, .fastest-content li {
+  color: var(--text-muted, #94a3b8);
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.fastest-content ul { padding-left: 20px; margin-bottom: 20px; }
+
+.fastest-container {
+  background: rgba(30, 41, 59, 0.6);
+  padding: 40px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.start-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.start-box input {
+  padding: 12px 16px;
+  width: 250px;
+  border-radius: 10px;
+  border: 2px solid rgba(148, 163, 184, 0.3);
+  font-size: 15px;
+  background: rgba(15, 23, 42, 0.6);
+  color: var(--text-primary, #f8fafc);
+}
+
+.start-box input::placeholder {
+  color: var(--text-muted, #64748b);
+}
+
+.start-box input:focus {
+  outline: none;
+  border-color: var(--accent, #0d9488);
+}
+
+.start-box button {
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent, #0d9488);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.start-box button:hover {
+  background: var(--accent-hover, #0f766e);
+  transform: translateY(-1px);
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-muted, #94a3b8);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.game-header h3 { margin: 0; }
+
+.question-box h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.option-btn {
+  padding: 14px;
+  border-radius: 10px;
+  border: 2px solid rgba(148, 163, 184, 0.3);
+  background: rgba(15, 23, 42, 0.5);
+  color: var(--text-primary, #f8fafc);
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 15px;
+}
+
+.option-btn:hover {
+  background: rgba(13, 148, 136, 0.2);
+  border-color: var(--accent, #0d9488);
+}
+
+.option-btn.correct {
+  background: #059669;
+  border-color: #059669;
+  color: white;
+}
+
+.option-btn.wrong {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: white;
+}
+
+.next-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent, #0d9488);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.next-btn:hover {
+  background: var(--accent-hover, #0f766e);
+}
+
+.result-box {
+  padding: 24px;
+}
+
+.result-box h2 {
+  margin-bottom: 15px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.result-box button {
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent, #0d9488);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.result-box button:hover {
+  background: var(--accent-hover, #0f766e);
+}
+
+.fastest-faq h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.fastest-faq h3 {
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.fastest-faq p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: var(--text-muted, #94a3b8);
+}
+
+@media (max-width: 768px) {
+  .game-header { flex-direction: column; text-align: center; }
+  .options { grid-template-columns: 1fr; }
+  .fastest-container { padding: 30px 18px; }
+}
+
+@media (max-width: 480px) {
+  .fastest-page { padding: 30px 15px; }
+  .fastest-content h1 { font-size: 24px; }
+  .fastest-content h2 { font-size: 18px; }
+}

@@ -1,0 +1,116 @@
+/* ===============================
+   DUMB CHARADES - Modern Dark Theme
+================================ */
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: 'Inter', system-ui, sans-serif;
+  text-align: center;
+  color: var(--text-primary, #f8fafc);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.infoBox {
+  background: rgba(30, 41, 59, 0.6);
+  padding: 28px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  margin-bottom: 35px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.infoBox p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: var(--text-muted, #94a3b8);
+}
+
+.infoBox strong {
+  color: var(--text-primary, #f8fafc);
+}
+
+.infoBox p:nth-child(2) {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--accent, #0d9488);
+}
+
+.turn-hint {
+  font-size: 13px !important;
+  opacity: 0.9;
+  margin-top: 6px !important;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: var(--accent, #0d9488);
+  color: white;
+  transition: 0.2s ease;
+  min-width: 140px;
+}
+
+.button:hover:not(:disabled) {
+  background: var(--accent-hover, #0f766e);
+  transform: translateY(-1px);
+}
+
+.button:disabled {
+  background: rgba(148, 163, 184, 0.3);
+  color: var(--text-muted, #64748b);
+  cursor: not-allowed;
+}
+
+.rules {
+  text-align: left;
+  background: rgba(30, 41, 59, 0.5);
+  padding: 28px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.rules h2 {
+  font-size: 22px;
+  margin-bottom: 16px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.rules ul {
+  padding-left: 20px;
+}
+
+.rules li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted, #94a3b8);
+}
+
+@media (max-width: 768px) {
+  .container { padding: 40px 15px; }
+  .title { font-size: 26px; }
+  .infoBox p { font-size: 16px; }
+  .buttonGroup { flex-direction: column; gap: 12px; }
+  .button { width: 100%; }
+  .rules { padding: 20px; }
+}

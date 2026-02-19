@@ -1,0 +1,76 @@
+.ideas {
+ 
+  padding: 80px 10%;
+  font-family: 'Inter', sans-serif;
+}
+
+.ideas-hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ideas-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.ideas-hero p {
+  font-size: 18px;
+  color: var(--text-muted, #94a3b8);
+}
+
+/* GRID */
+
+.ideas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* CARD */
+
+.idea-card {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  width: 280px;
+  padding: 30px;
+  border-radius: 16px;
+  transition: 0.3s ease;
+  text-align: left;
+}
+
+.idea-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-color: rgba(13, 148, 136, 0.3);
+}
+
+.idea-card h3 {
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+
+.idea-card p {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.idea-card button {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: #0d9488;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.idea-card button:hover {
+  background-color: #0f766e;
+}

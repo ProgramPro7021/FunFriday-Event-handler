@@ -1,0 +1,134 @@
+/* =========================
+   PUSHABLE BUTTON (ENHANCED)
+========================= */
+.button-82-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 200ms, transform 200ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+/* SHADOW */
+.button-82-shadow {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: hsl(220deg 10% 10% / 0.35);
+  transform: translateY(3px);
+  transition: transform 300ms cubic-bezier(.3, .7, .4, 1);
+}
+
+/* EDGE */
+.button-82-edge {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  background: linear-gradient(
+    to left,
+    hsl(174deg 62% 28%) 0%,
+    hsl(174deg 62% 35%) 8%,
+    hsl(174deg 62% 35%) 92%,
+    hsl(174deg 62% 28%) 100%
+  );
+}
+
+/* FRONT */
+.button-82-front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  position: relative;
+  padding: 12px 28px;
+  border-radius: 14px;
+
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+
+  color: #fff;
+  background: linear-gradient(
+    135deg,
+    #0d9488,
+    #0f766e
+  );
+
+  transform: translateY(-4px);
+  transition: transform 300ms cubic-bezier(.3, .7, .4, 1);
+}
+
+/* HOVER */
+.button-82-pushable:hover {
+  filter: brightness(1.08);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-6px);
+}
+
+.button-82-pushable:hover .button-82-shadow {
+  transform: translateY(5px);
+}
+
+/* ACTIVE (PRESS) */
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+}
+
+.button-82-pushable:active .button-82-shadow {
+  transform: translateY(1px);
+}
+
+/* FOCUS */
+.button-82-pushable:focus-visible {
+  outline: 3px solid rgba(13, 148, 136, 0.4);
+  outline-offset: 4px;
+}
+
+/* =========================
+   SIZE VARIANTS
+========================= */
+.button-sm .button-82-front {
+  padding: 8px 18px;
+  font-size: 0.85rem;
+}
+
+.button-lg .button-82-front {
+  padding: 14px 44px;
+  font-size: 1.15rem;
+}
+
+/* =========================
+   COLOR VARIANTS
+========================= */
+.button-success .button-82-front {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.button-danger .button-82-front {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.button-warning .button-82-front {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+/* =========================
+   DISABLED
+========================= */
+.button-82-pushable:disabled {
+  cursor: not-allowed;
+  filter: grayscale(1) opacity(0.6);
+}
+
+.button-82-pushable:disabled .button-82-front,
+.button-82-pushable:disabled .button-82-shadow {
+  transform: none;
+}

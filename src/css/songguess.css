@@ -1,0 +1,177 @@
+/* ======================================
+   SONG GUESS - Modern Dark Theme
+====================================== */
+
+.songguess-page {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-primary, #f8fafc);
+  line-height: 1.7;
+}
+
+.songguess-content {
+  margin-bottom: 60px;
+}
+
+.songguess-content h1, .songguess-content h2 {
+  color: var(--text-primary, #f8fafc);
+}
+
+.songguess-content h1 { font-size: 30px; margin-bottom: 20px; }
+.songguess-content h2 { font-size: 22px; margin-top: 35px; margin-bottom: 12px; }
+.songguess-content p, .songguess-content li {
+  color: var(--text-muted, #94a3b8);
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.songguess-content ul { padding-left: 20px; margin-bottom: 20px; }
+
+.songguess-container {
+  background: rgba(30, 41, 59, 0.6);
+  padding: 40px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.start-btn {
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent, #0d9488);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.start-btn:hover {
+  background: var(--accent-hover, #0f766e);
+  transform: translateY(-1px);
+}
+
+.game-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-muted, #94a3b8);
+}
+
+.hint {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--accent, #0d9488);
+}
+
+.songguess-container form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.songguess-container input {
+  padding: 12px 16px;
+  width: 260px;
+  border-radius: 10px;
+  border: 2px solid rgba(148, 163, 184, 0.3);
+  font-size: 15px;
+  background: rgba(15, 23, 42, 0.6);
+  color: var(--text-primary, #f8fafc);
+}
+
+.songguess-container input::placeholder {
+  color: var(--text-muted, #64748b);
+}
+
+.songguess-container input:focus {
+  outline: none;
+  border-color: var(--accent, #0d9488);
+}
+
+.songguess-container button[type="submit"] {
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent, #0d9488);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.songguess-container button[type="submit"]:hover {
+  background: var(--accent-hover, #0f766e);
+}
+
+.message {
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 15px;
+  min-height: 22px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.result-box {
+  padding: 24px;
+}
+
+.result-box h2 {
+  margin-bottom: 12px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.result-box button {
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent, #0d9488);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.result-box button:hover {
+  background: var(--accent-hover, #0f766e);
+}
+
+.songguess-faq h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.songguess-faq h3 {
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.songguess-faq p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: var(--text-muted, #94a3b8);
+}
+
+@media (max-width: 768px) {
+  .songguess-container { padding: 30px 18px; }
+  .hint { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+  .songguess-page { padding: 30px 15px; }
+  .songguess-content h1 { font-size: 24px; }
+  .songguess-content h2 { font-size: 18px; }
+  .songguess-container input { width: 100%; }
+}

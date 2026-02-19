@@ -1,0 +1,174 @@
+/* =====================================
+   SKETCH & GUESS - Modern Dark Theme
+===================================== */
+
+.sketch-page {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-primary, #f8fafc);
+  line-height: 1.7;
+}
+
+.sketch-content {
+  margin-bottom: 60px;
+}
+
+.sketch-content h1, .sketch-content h2 {
+  color: var(--text-primary, #f8fafc);
+}
+
+.sketch-content h1 { font-size: 30px; margin-bottom: 20px; }
+.sketch-content h2 { font-size: 22px; margin-top: 35px; margin-bottom: 12px; }
+.sketch-content p, .sketch-content li {
+  color: var(--text-muted, #94a3b8);
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.sketch-content ul { padding-left: 20px; margin-bottom: 20px; }
+
+.sketch-container {
+  background: rgba(30, 41, 59, 0.6);
+  padding: 40px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.start-btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent, #0d9488);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.start-btn:hover {
+  background: var(--accent-hover, #0f766e);
+  transform: translateY(-1px);
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.game-header h2 {
+  font-size: 20px;
+  margin: 0;
+  color: var(--text-primary, #f8fafc);
+}
+
+.game-header h3 {
+  margin: 0;
+  color: #f87171;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-muted, #94a3b8);
+}
+
+.controls input[type="range"] { cursor: pointer; }
+
+.controls button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent, #0d9488);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.controls button:hover {
+  background: var(--accent-hover, #0f766e);
+}
+
+.canvas {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid rgba(148, 163, 184, 0.3);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.8);
+  cursor: crosshair;
+}
+
+.result-box {
+  padding: 24px;
+}
+
+.result-box h2 {
+  margin-bottom: 12px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.result-box button {
+  padding: 12px 24px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent, #0d9488);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.result-box button:hover {
+  background: var(--accent-hover, #0f766e);
+}
+
+.sketch-faq h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.sketch-faq h3 {
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.sketch-faq p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: var(--text-muted, #94a3b8);
+}
+
+@media (max-width: 768px) {
+  .game-header { flex-direction: column; gap: 8px; text-align: center; }
+  .sketch-container { padding: 30px 18px; }
+}
+
+@media (max-width: 480px) {
+  .sketch-page { padding: 30px 15px; }
+  .sketch-content h1 { font-size: 24px; }
+  .sketch-content h2 { font-size: 18px; }
+}

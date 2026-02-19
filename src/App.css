@@ -1,0 +1,212 @@
+/* ==================================================
+   DESIGN TOKENS
+================================================== */
+:root {
+  --accent: #0d9488;
+  --accent-hover: #0f766e;
+  --accent-muted: rgba(13, 148, 136, 0.15);
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --text-primary: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-subtle: rgba(148, 163, 184, 0.2);
+}
+
+/* ==================================================
+   RESET & BASE
+================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  color: var(--text-primary);
+  position: relative;
+}
+
+/* Subtle noise overlay for depth */
+html::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(13, 148, 136, 0.08), transparent);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ==================================================
+   ROOT LAYOUT
+================================================== */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area (navbar-safe) */
+main {
+  flex: 1;
+  width: 100%;
+  padding: 120px 24px 48px; /* space below navbar */
+  background: transparent;
+}
+
+/* ==================================================
+   GLOBAL TYPOGRAPHY
+================================================== */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+p, span, li {
+  color: var(--text-muted);
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* ================= SECTIONS WITH BACKGROUND ================= */
+section {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 40px 24px;
+  margin: 24px auto;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  color: var(--text-primary) !important;
+}
+
+section h1, section h2, section h3, section h4, section h5, section h6 {
+  color: var(--text-primary) !important;
+}
+
+section p, section span, section li {
+  color: var(--text-muted) !important;
+}
+
+section a {
+  color: var(--accent) !important;
+}
+
+section a:hover {
+  color: var(--accent-hover) !important;
+}
+
+/* ==================================================
+   UTILITIES
+================================================== */
+.text-center { text-align: center; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+.mt-4 { margin-top: 32px; }
+
+/* ==================================================
+   SCROLLBAR
+================================================== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track { background: transparent; }
+
+/* ==================================================
+   TEAM TURN BANNER
+================================================== */
+.team-turn-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(13, 148, 136, 0.15);
+  border: 1px solid rgba(13, 148, 136, 0.3);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.team-turn-label {
+  font-size: 15px;
+  color: var(--text-primary, #f8fafc);
+}
+
+.team-turn-team {
+  color: var(--text-muted, #94a3b8);
+  font-weight: 500;
+}
+
+.team-turn-btn {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent, #0d9488);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.team-turn-btn:hover {
+  background: var(--accent-hover, #0f766e);
+}
+
+.team-turn-link {
+  font-size: 14px;
+  color: var(--accent, #0d9488);
+  text-decoration: none;
+}
+
+.team-turn-link:hover {
+  text-decoration: underline;
+}
+
+/* ==================================================
+   ADSENSE
+================================================== */
+.ad-unit-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 24px 16px;
+  min-height: 50px;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 768px) {
+  main { padding: 110px 16px 32px; }
+}
