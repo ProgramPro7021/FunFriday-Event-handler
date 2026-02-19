@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
+<<<<<<< HEAD
 import { useTeam } from "../context/TeamContext";
 import TeamTurnBanner from "../components/TeamTurnBanner";
 import "../css/EmojiGuess.css";
 
 const EmojiGuess = () => {
   const { hasTeams, nextTurn } = useTeam();
+=======
+import "../css/EmojiGuess.css";
+
+const EmojiGuess = () => {
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   const emojiMovies = [
     { emoji: "🦁👑", answer: "The Lion King" },
     { emoji: "🧙‍♂️🪄⚡", answer: "Harry Potter" },
@@ -33,7 +39,10 @@ const EmojiGuess = () => {
     setMessage("");
     setGuess("");
     setCurrentIndex((prevIndex) => (prevIndex + 1) % emojiMovies.length);
+<<<<<<< HEAD
     if (hasTeams) nextTurn();
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   };
 
   return (
@@ -162,8 +171,11 @@ const EmojiGuess = () => {
       {/* ================= GAME SECTION ================= */}
       <section className="emoji-game">
 
+<<<<<<< HEAD
         <TeamTurnBanner showNextButton={false} />
 
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
         <div className="emoji-box">
           <span className="emoji">
             {emojiMovies[currentIndex].emoji}

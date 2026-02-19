@@ -1,4 +1,5 @@
 /* ==================================================
+<<<<<<< HEAD
    DESIGN TOKENS
 ================================================== */
 :root {
@@ -13,6 +14,8 @@
 }
 
 /* ==================================================
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
    RESET & BASE
 ================================================== */
 *, *::before, *::after {
@@ -23,6 +26,7 @@ html, body {
   height: 100%;
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+<<<<<<< HEAD
   background: linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
   color: var(--text-primary);
   position: relative;
@@ -39,6 +43,13 @@ html::before {
   background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(13, 148, 136, 0.08), transparent);
   pointer-events: none;
   z-index: -1;
+=======
+  background-color: #f8fafc;
+  background-image: url("./assets/patt.png");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #111827;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 /* ==================================================
@@ -55,12 +66,16 @@ main {
   flex: 1;
   width: 100%;
   padding: 120px 24px 48px; /* space below navbar */
+<<<<<<< HEAD
   background: transparent;
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 /* ==================================================
    GLOBAL TYPOGRAPHY
 ================================================== */
+<<<<<<< HEAD
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 700;
@@ -79,10 +94,22 @@ h2 {
 
 p, span, li {
   color: var(--text-muted);
+=======
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 p {
   margin: 0;
+<<<<<<< HEAD
 }
 
 a {
@@ -122,6 +149,9 @@ section a {
 
 section a:hover {
   color: var(--accent-hover) !important;
+=======
+  color: #6b7280;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 /* ==================================================
@@ -143,6 +173,7 @@ section a:hover {
 ::-webkit-scrollbar-track { background: transparent; }
 
 /* ==================================================
+<<<<<<< HEAD
    TEAM TURN BANNER
 ================================================== */
 .team-turn-banner {
@@ -205,6 +236,8 @@ section a:hover {
 }
 
 /* ==================================================
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
    RESPONSIVE
 ================================================== */
 @media (max-width: 768px) {

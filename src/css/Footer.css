@@ -1,9 +1,14 @@
 /* Footer.css */
 
 .footer {
+<<<<<<< HEAD
   background: rgba(15, 23, 42, 0.95);
   border-top: 1px solid rgba(148, 163, 184, 0.15);
   color: #94a3b8;
+=======
+  background: #2c3e50;
+  color: #ecf0f1;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   padding: 40px 20px;
   margin-top: 50px;
 }
@@ -17,13 +22,21 @@
 .footer-brand h2 {
   font-size: 1.6rem;
   margin-bottom: 5px;
+<<<<<<< HEAD
   color: #f8fafc;
   font-weight: 700;
+=======
+  color: #f1c40f; /* gold accent */
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .footer-brand p {
   font-size: 0.95rem;
+<<<<<<< HEAD
   color: #94a3b8;
+=======
+  color: #bdc3c7;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   margin-bottom: 20px;
 }
 
@@ -32,6 +45,7 @@
 }
 
 .footer-links a {
+<<<<<<< HEAD
   color: #94a3b8;
   margin: 0 12px;
   text-decoration: none;
@@ -41,6 +55,17 @@
 
 .footer-links a:hover {
   color: #5eead4;
+=======
+  color: #ecf0f1;
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #3498db;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .footer-social {
@@ -48,6 +73,7 @@
 }
 
 .footer-social a {
+<<<<<<< HEAD
   color: #94a3b8;
   margin: 0 10px;
   font-size: 1.3rem;
@@ -56,10 +82,24 @@
 
 .footer-social a:hover {
   color: #5eead4;
+=======
+  color: #ecf0f1;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #1abc9c;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .footer-text {
   font-size: 0.85rem;
+<<<<<<< HEAD
   color: #64748b;
+=======
+  color: #95a5a6;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   margin-top: 20px;
 }

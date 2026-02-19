@@ -1,15 +1,27 @@
 import React, { useState, useEffect } from "react";
+<<<<<<< HEAD
 import { Helmet } from "react-helmet";
 import { useTeam } from "../context/TeamContext";
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 import "../css/SplitTeam.css";
 import Timer from "./Timer";
 
 const SplitTeam = () => {
+<<<<<<< HEAD
   const { teams, setTeams } = useTeam();
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   const [playerName, setPlayerName] = useState("");
   const [players, setPlayers] = useState(
     () => JSON.parse(localStorage.getItem("players")) || []
   );
+<<<<<<< HEAD
+=======
+  const [teams, setTeams] = useState(
+    () => JSON.parse(localStorage.getItem("teams")) || []
+  );
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   const [numTeams, setNumTeams] = useState(
     () => Number(localStorage.getItem("numTeams")) || 2
   );
@@ -28,6 +40,13 @@ const SplitTeam = () => {
   }, [players]);
 
   useEffect(() => {
+<<<<<<< HEAD
+=======
+    localStorage.setItem("teams", JSON.stringify(teams));
+  }, [teams]);
+
+  useEffect(() => {
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
     localStorage.setItem("numTeams", numTeams);
   }, [numTeams]);
 
@@ -133,6 +152,7 @@ const SplitTeam = () => {
   return (
     <div className="split-team">
 
+<<<<<<< HEAD
       {/* ================= SEO META ================= */}
       <Helmet>
         <title>Random Team Generator – Split Teams Instantly</title>
@@ -146,6 +166,8 @@ const SplitTeam = () => {
         />
       </Helmet>
 
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
       {/* ================= SEO SECTION ================= */}
       <section className="seo-content">
         <h1>Random Team Generator & Split Team Tool</h1>
@@ -161,7 +183,10 @@ const SplitTeam = () => {
           <li>Select number of teams</li>
           <li>Click split to generate random teams</li>
           <li>Track scores and declare a winner</li>
+<<<<<<< HEAD
           <li><strong>Bonus:</strong> Once split, games will automatically rotate turns — Team 1 → Team 2 → Team 1 → …</li>
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
         </ul>
 
         <h2>Why Use a Random Team Generator?</h2>

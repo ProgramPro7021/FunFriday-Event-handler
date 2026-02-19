@@ -1,13 +1,19 @@
 import React, { useRef, useState, useEffect } from "react";
+<<<<<<< HEAD
 import { Helmet } from "react-helmet";
 import { useTeam } from "../context/TeamContext";
 import TeamTurnBanner from "../components/TeamTurnBanner";
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 import "../css/Sketch.css";
 
 const words = ["Elephant", "Car", "Laptop", "Tree", "Cricket", "House"];
 
 const Sketch = () => {
+<<<<<<< HEAD
   const { hasTeams, nextTurn } = useTeam();
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
 
@@ -97,7 +103,10 @@ const Sketch = () => {
   };
 
   const resetGame = () => {
+<<<<<<< HEAD
     if (hasTeams) nextTurn();
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
     setStarted(false);
     setGameOver(false);
     setTimeLeft(60);
@@ -108,6 +117,7 @@ const Sketch = () => {
   return (
     <div className="sketch-page">
 
+<<<<<<< HEAD
       {/* ================= SEO META ================= */}
       <Helmet>
         <title>Sketch & Guess Drawing Game – Team Fun Activity</title>
@@ -121,6 +131,8 @@ const Sketch = () => {
         />
       </Helmet>
 
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
       {/* ================= SEO CONTENT ================= */}
       <section className="sketch-content">
         <h1>🎨 Sketch & Guess Drawing Game</h1>
@@ -150,8 +162,11 @@ const Sketch = () => {
       {/* ================= GAME SECTION ================= */}
       <section className="sketch-container">
 
+<<<<<<< HEAD
         <TeamTurnBanner showNextButton={false} />
 
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
         {!started && !gameOver && (
           <button className="start-btn" onClick={startGame}>
             Start Game

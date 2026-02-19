@@ -7,9 +7,14 @@
   margin: 0 auto;
   padding: 50px 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+<<<<<<< HEAD
   color: #1f2937;
   line-height: 1.7;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+=======
+  color: #222;
+  line-height: 1.7;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 /* ===============================
@@ -25,16 +30,24 @@
   font-size: 32px;
   margin-bottom: 15px;
   font-weight: 700;
+<<<<<<< HEAD
   color: #020617;
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+=======
+  color: #111;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .contact-hero p {
   font-size: 16px;
   max-width: 650px;
   margin: 0 auto;
+<<<<<<< HEAD
   color: #374151;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+=======
+  color: #555;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 /* ===============================
@@ -62,8 +75,12 @@
   font-weight: 600;
   margin-bottom: 6px;
   font-size: 14px;
+<<<<<<< HEAD
   color: #1f2937;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+=======
+  color: #333;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .form-group input,
@@ -144,14 +161,22 @@
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 6px;
+<<<<<<< HEAD
   color: #1f2937;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+=======
+  color: #333;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .faq-item p {
   font-size: 15px;
+<<<<<<< HEAD
   color: #374151;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+=======
+  color: #555;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 /* ===============================

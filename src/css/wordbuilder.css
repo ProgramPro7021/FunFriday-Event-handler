@@ -1,20 +1,37 @@
 /* =====================================
+<<<<<<< HEAD
    WORD BUILDER - Modern Dark Theme
+=======
+   PAGE WRAPPER
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 ===================================== */
 
 .wordbuilder-page {
   max-width: 1000px;
   margin: 60px auto;
   padding: 40px 20px;
+<<<<<<< HEAD
   font-family: 'Inter', system-ui, sans-serif;
   color: var(--text-primary, #f8fafc);
   line-height: 1.7;
 }
 
+=======
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* =====================================
+   SEO CONTENT SECTION
+===================================== */
+
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 .wordbuilder-content {
   margin-bottom: 60px;
 }
 
+<<<<<<< HEAD
 .wordbuilder-content h1, .wordbuilder-content h2 {
   color: var(--text-primary, #f8fafc);
 }
@@ -35,10 +52,48 @@
   border-radius: 16px;
   border: 1px solid rgba(148, 163, 184, 0.2);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+=======
+.wordbuilder-content h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.wordbuilder-content h2 {
+  font-size: 22px;
+  margin-top: 35px;
+  margin-bottom: 12px;
+}
+
+.wordbuilder-content p {
+  font-size: 15.5px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.wordbuilder-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.wordbuilder-content li {
+  margin-bottom: 8px;
+}
+
+/* =====================================
+   GAME CONTAINER
+===================================== */
+
+.wordbuilder-container {
+  background: #f8f9fb;
+  padding: 40px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   text-align: center;
   margin-bottom: 60px;
 }
 
+<<<<<<< HEAD
 .start-btn {
   padding: 12px 28px;
   font-size: 16px;
@@ -56,22 +111,57 @@
   transform: translateY(-1px);
 }
 
+=======
+/* =====================================
+   START BUTTON
+===================================== */
+
+.start-btn {
+  padding: 12px 26px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #357abd;
+}
+
+/* =====================================
+   GAME HEADER
+===================================== */
+
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 .game-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 16px;
+<<<<<<< HEAD
   color: var(--text-muted, #94a3b8);
   flex-wrap: wrap;
   gap: 8px;
 }
 
+=======
+}
+
+/* =====================================
+   SCRAMBLED WORD
+===================================== */
+
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 .scrambled {
   font-size: 28px;
   letter-spacing: 6px;
   margin-bottom: 20px;
   font-weight: 700;
+<<<<<<< HEAD
   color: var(--accent, #0d9488);
 }
 
@@ -79,11 +169,25 @@
   display: flex;
   justify-content: center;
   gap: 12px;
+=======
+  color: #4a90e2;
+}
+
+/* =====================================
+   FORM
+===================================== */
+
+.wordbuilder-container form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   margin-bottom: 15px;
   flex-wrap: wrap;
 }
 
 .wordbuilder-container input {
+<<<<<<< HEAD
   padding: 12px 16px;
   width: 250px;
   border-radius: 10px;
@@ -117,19 +221,58 @@
   background: var(--accent-hover, #0f766e);
 }
 
+=======
+  padding: 10px;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.wordbuilder-container button[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.wordbuilder-container button[type="submit"]:hover {
+  background-color: #357abd;
+}
+
+/* =====================================
+   MESSAGE
+===================================== */
+
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 .message {
   font-weight: 600;
   margin-top: 10px;
   font-size: 15px;
+<<<<<<< HEAD
   color: var(--text-primary, #f8fafc);
 }
 
 .result-box {
   padding: 24px;
+=======
+}
+
+/* =====================================
+   RESULT BOX
+===================================== */
+
+.result-box {
+  padding: 20px;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .result-box h2 {
   margin-bottom: 12px;
+<<<<<<< HEAD
   color: var(--text-primary, #f8fafc);
 }
 
@@ -145,24 +288,55 @@
 
 .result-box button:hover {
   background: var(--accent-hover, #0f766e);
+=======
+}
+
+.result-box button {
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.result-box button:hover {
+  background-color: #357abd;
+}
+
+/* =====================================
+   FAQ SECTION
+===================================== */
+
+.wordbuilder-faq {
+  margin-top: 40px;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .wordbuilder-faq h2 {
   font-size: 22px;
   margin-bottom: 20px;
+<<<<<<< HEAD
   color: var(--text-primary, #f8fafc);
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .wordbuilder-faq h3 {
   font-size: 16px;
   margin-top: 18px;
   margin-bottom: 6px;
+<<<<<<< HEAD
   color: var(--text-primary, #f8fafc);
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .wordbuilder-faq p {
   font-size: 15px;
   margin-bottom: 12px;
+<<<<<<< HEAD
   color: var(--text-muted, #94a3b8);
 }
 
@@ -177,4 +351,46 @@
   .wordbuilder-content h1 { font-size: 24px; }
   .wordbuilder-content h2 { font-size: 18px; }
   .wordbuilder-container input { width: 100%; }
+=======
+  color: #555;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+  .game-header {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .scrambled {
+    font-size: 22px;
+    letter-spacing: 4px;
+  }
+
+  .wordbuilder-container {
+    padding: 30px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wordbuilder-page {
+    padding: 30px 15px;
+  }
+
+  .wordbuilder-content h1 {
+    font-size: 24px;
+  }
+
+  .wordbuilder-content h2 {
+    font-size: 18px;
+  }
+
+  .wordbuilder-container input {
+    width: 100%;
+  }
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }

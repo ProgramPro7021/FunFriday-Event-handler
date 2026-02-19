@@ -5,9 +5,14 @@
   margin: 60px auto;
   padding: 40px 24px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+<<<<<<< HEAD
   color: #1f2937;
   line-height: 1.75;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+=======
+  color: #2c3e50;
+  line-height: 1.75;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 /* ===== Hero Section ===== */
@@ -58,10 +63,16 @@
 .about-page h2 {
   font-size: 2rem;
   margin-bottom: 25px;
+<<<<<<< HEAD
   color: #374151;
   position: relative;
   padding-bottom: 10px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+=======
+  color: #34495e;
+  position: relative;
+  padding-bottom: 10px;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .about-page h2::after {
@@ -148,7 +159,11 @@
   background: #ffffff;
   padding: 28px;
   border-radius: 14px;
+<<<<<<< HEAD
   border-left: 5px solid #0d9488;
+=======
+  border-left: 5px solid #3498db;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   margin-bottom: 25px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
 }

@@ -7,9 +7,14 @@
   margin: 60px auto;
   padding: 40px 20px;
   font-family: "Segoe UI", sans-serif;
+<<<<<<< HEAD
   color: #1f2937;
   line-height: 1.6;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+=======
+  color: #222;
+  line-height: 1.6;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 /* ===============================
@@ -33,8 +38,12 @@
 
 .seo-content p {
   margin-bottom: 12px;
+<<<<<<< HEAD
   color: #374151;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+=======
+  color: #444;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .seo-content ul {
@@ -173,8 +182,12 @@
 
 .faq-section p {
   margin-bottom: 10px;
+<<<<<<< HEAD
   color: #374151;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+=======
+  color: #555;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 /* ===============================

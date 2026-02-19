@@ -1,5 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
+<<<<<<< HEAD
 import { Helmet } from "react-helmet";
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 import "../css/StopWatch.css";
 
 const StopWatch = () => {
@@ -79,6 +82,7 @@ const StopWatch = () => {
   return (
     <div className="stopwatch-page">
 
+<<<<<<< HEAD
       {/* ================= SEO META ================= */}
       <Helmet>
         <title>Free Online Stopwatch with Lap Timer – Accurate Timing Tool</title>
@@ -92,6 +96,8 @@ const StopWatch = () => {
         />
       </Helmet>
 
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
       {/* ================= SEO CONTENT ================= */}
       <section className="stopwatch-seo">
         <h1>Free Online Stopwatch with Lap Timer</h1>

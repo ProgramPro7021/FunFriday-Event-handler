@@ -2,7 +2,10 @@
   "name": "funfridaynew",
   "private": true,
   "version": "0.0.0",
+<<<<<<< HEAD
   "homepage": "https://funfriday.online",
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,7 +16,10 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+<<<<<<< HEAD
     "firebase": "^12.9.0",
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
     "framer-motion": "^12.34.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
@@ -23,8 +29,11 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.1",
     "gh-pages": "^6.3.0",
+<<<<<<< HEAD
     "stylelint": "^17.3.0",
     "stylelint-config-standard": "^40.0.0",
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
     "vite": "^7.2.4"
   }
 }

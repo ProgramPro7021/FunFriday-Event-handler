@@ -1,10 +1,17 @@
 import React, { useState, useRef } from "react";
 import { Helmet } from "react-helmet";
+<<<<<<< HEAD
 import { useTeam } from "../context/TeamContext";
 import "../css/DumbCharades.css";
 
 const DumbCharades = () => {
   const { hasTeams, currentPlayer, nextTurn } = useTeam();
+=======
+import "../css/DumbCharades.css";
+
+const DumbCharades = () => {
+  const [team, setTeam] = useState("Team A");
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   const [timer, setTimer] = useState(60);
   const [isPlaying, setIsPlaying] = useState(false);
   const countdownRef = useRef(null);
@@ -23,7 +30,10 @@ const DumbCharades = () => {
           clearInterval(countdownRef.current);
           countdownRef.current = null;
           setIsPlaying(false);
+<<<<<<< HEAD
           if (hasTeams) nextTurn();
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
           return 0;
         }
         return prevTimer - 1;
@@ -31,6 +41,12 @@ const DumbCharades = () => {
     }, 1000);
   };
 
+<<<<<<< HEAD
+=======
+  const switchTeam = () => {
+    setTeam(team === "Team A" ? "Team B" : "Team A");
+  };
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 
   return (
     <div className="container">
@@ -106,6 +122,7 @@ const DumbCharades = () => {
 
       <section className="charades-game">
         <div className="infoBox">
+<<<<<<< HEAD
           {hasTeams && currentPlayer ? (
             <>
               <p><strong>Current turn:</strong> {currentPlayer.playerName} ({currentPlayer.teamName})</p>
@@ -114,6 +131,9 @@ const DumbCharades = () => {
           ) : (
             <p className="turn-hint">Split teams first on the Split Team page to use automatic turn rotation.</p>
           )}
+=======
+          <p><strong>Current Team:</strong> {team}</p>
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
           <p><strong>Timer:</strong> {timer} seconds</p>
         </div>
 
@@ -126,11 +146,17 @@ const DumbCharades = () => {
             {isPlaying ? "Restart Round" : "Start Round"}
           </button>
 
+<<<<<<< HEAD
           {hasTeams && currentPlayer && (
             <button className="button" onClick={nextTurn}>
               Next Player's Turn
             </button>
           )}
+=======
+          <button className="button" onClick={switchTeam}>
+            Switch Team
+          </button>
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
         </div>
       </section>
 

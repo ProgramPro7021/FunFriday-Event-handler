@@ -1,5 +1,9 @@
 /* ==============================
+<<<<<<< HEAD
    MEMORY GAME - Modern Dark Theme
+=======
+   MEMORY CONTAINER
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 ============================== */
 
 .memory-container {
@@ -7,20 +11,35 @@
   margin: 60px auto;
   padding: 40px 20px;
   text-align: center;
+<<<<<<< HEAD
   font-family: 'Inter', system-ui, sans-serif;
   color: var(--text-primary, #f8fafc);
+=======
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .memory-container h1 {
   font-size: 30px;
   margin-bottom: 20px;
+<<<<<<< HEAD
   color: var(--text-primary, #f8fafc);
 }
 
+=======
+}
+
+/* ==============================
+   STATS SECTION
+============================== */
+
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 .stats {
   display: flex;
   justify-content: center;
   gap: 40px;
+<<<<<<< HEAD
   margin-bottom: 24px;
   font-weight: 600;
   font-size: 16px;
@@ -39,10 +58,35 @@
   color: white;
   cursor: pointer;
   transition: 0.2s ease;
+=======
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.stats p {
+  margin: 0;
+}
+
+/* ==============================
+   BUTTON
+============================== */
+
+.memory-container button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   margin-bottom: 30px;
 }
 
 .memory-container button:hover {
+<<<<<<< HEAD
   background: var(--accent-hover, #0f766e);
   transform: translateY(-1px);
 }
@@ -54,6 +98,26 @@
   justify-items: center;
 }
 
+=======
+  background-color: #357abd;
+}
+
+/* ==============================
+   CARD GRID
+============================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  justify-items: center;
+}
+
+/* ==============================
+   CARD STRUCTURE
+============================== */
+
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 .card {
   position: relative;
   width: 100px;
@@ -63,27 +127,49 @@
 .card > div {
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   border-radius: 12px;
+=======
+  border-radius: 10px;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.5s ease;
   cursor: pointer;
 }
 
+<<<<<<< HEAD
+=======
+/* Flip animation */
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 .card .flipped {
   transform: rotateY(180deg);
 }
 
+<<<<<<< HEAD
 .front, .back {
   position: absolute;
   width: 100%;
   height: 100%;
   border-radius: 12px;
+=======
+/* ==============================
+   CARD FACES
+============================== */
+
+.front,
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 36px;
   backface-visibility: hidden;
+<<<<<<< HEAD
   border: 2px solid rgba(148, 163, 184, 0.2);
 }
 
@@ -110,4 +196,57 @@
   .memory-container { padding: 30px 15px; }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
   .stats { flex-direction: column; gap: 8px; }
+=======
+  border: 1px solid #ddd;
+}
+
+/* Front (emoji) */
+.front {
+  background: #ffffff;
+  transform: rotateY(180deg);
+}
+
+/* Back (question mark) */
+.back {
+  background: #4a90e2;
+  color: white;
+}
+
+/* ==============================
+   HOVER EFFECT
+============================== */
+
+.card:hover .back {
+  background-color: #357abd;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    width: 85px;
+    height: 105px;
+  }
+}
+
+@media (max-width: 480px) {
+  .memory-container {
+    padding: 30px 15px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 8px;
+  }
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }

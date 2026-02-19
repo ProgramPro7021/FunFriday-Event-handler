@@ -1,8 +1,13 @@
 import React from "react";
+<<<<<<< HEAD
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import AdUnit from "../components/AdUnit";
+=======
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 import "../css/Home.css";
 
 const fadeUp = {
@@ -64,6 +69,7 @@ const Home = () => {
 
   return (
     <div className="home">
+<<<<<<< HEAD
       {/* ================= SEO META ================= */}
       <Helmet>
         <title>FunFriday | Free Team Building Games & Activities</title>
@@ -77,6 +83,8 @@ const Home = () => {
         />
       </Helmet>
 
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
       {/* ================= HERO ================= */}
       <section className="hero">
         <motion.div
@@ -274,9 +282,12 @@ const Home = () => {
         </motion.div>
       </section>
 
+<<<<<<< HEAD
       {/* AdSense: set VITE_ADSENSE_SLOT in .env when you have ad unit slot IDs */}
       <AdUnit slot={import.meta.env.VITE_ADSENSE_SLOT || ""} />
 
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
       {/* ================= CTA ================= */}
 
       <section className="homepage-intro">
@@ -337,29 +348,55 @@ const Home = () => {
       </section>
 
       {/* ================= CTA ================= */}
+<<<<<<< HEAD
       <section className="cta-section">
         <motion.div
           className="cta-card"
+=======
+      <section className="cta">
+        <motion.div
+          className="cta-container"
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
+<<<<<<< HEAD
           <h2>Ready to Turn Your Team Into Champions?</h2>
+=======
+          <h2>Ready to Turn Your Team Into Champions? 🏆</h2>
+
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
           <p>
             Launch games, split teams, and create unforgettable Friday moments —
             all in under 30 seconds.
           </p>
+<<<<<<< HEAD
           <div className="cta-buttons">
             <button className="primary" onClick={() => navigate("/ideas")}>
               Start Playing
             </button>
             <button className="secondary" onClick={() => navigate("/splitTeam")}>
               Split Teams
+=======
+
+          <div className="cta-buttons">
+            <button className="primary" onClick={() => navigate("/ideas")}>
+              🚀 Start Playing Now
+            </button>
+
+            <button
+              className="secondary"
+              onClick={() => navigate("/splitTeam")}
+            >
+              👥 Split Teams First
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
             </button>
           </div>
         </motion.div>
 
+<<<<<<< HEAD
         {/* FAQ Cards */}
         <div className="faq-section">
           <h2 className="faq-title">Frequently Asked Questions</h2>
@@ -401,6 +438,54 @@ const Home = () => {
           </p>
           <p className="trust-strip-tagline">Built for teams that play together</p>
           <div className="trust-strip-divider" />
+=======
+        {/* faq */}
+        <section className="faq">
+          <div className="section-header">
+            <h2>Frequently Asked Questions</h2>
+          </div>
+
+          <div className="faq-content">
+            <h3>Is FunFriday free to use?</h3>
+            <p>
+              Yes, all games on FunFriday are free and accessible directly in
+              your browser.
+            </p>
+
+            <h3>Do I need to create an account?</h3>
+            <p>
+              No signup is required. Simply open the website and start playing.
+            </p>
+
+            <h3>Can these games be used in offices?</h3>
+            <p>
+              Yes, the platform is specifically designed for corporate
+              team-building sessions.
+            </p>
+
+            <h3>Are the games suitable for classrooms?</h3>
+            <p>
+              Yes, teachers can use these interactive games for educational and
+              recreational purposes.
+            </p>
+            <p>Trusted by Teams Across Industries</p>
+          </div>
+        </section>
+
+        {/* Dancing Emoji Section */}
+        <motion.div
+          className="emoji-party"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <span>💃</span>
+          <span>🕺</span>
+          <span>🎉</span>
+          <span>🔥</span>
+          <span>🎊</span>
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
         </motion.div>
       </section>
     </div>

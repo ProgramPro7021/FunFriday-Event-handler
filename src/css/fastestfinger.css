@@ -1,20 +1,37 @@
 /* =====================================
+<<<<<<< HEAD
    FASTEST FINGER - Modern Dark Theme
+=======
+   PAGE WRAPPER
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 ===================================== */
 
 .fastest-page {
   max-width: 1000px;
   margin: 60px auto;
   padding: 40px 20px;
+<<<<<<< HEAD
   font-family: 'Inter', system-ui, sans-serif;
   color: var(--text-primary, #f8fafc);
   line-height: 1.7;
 }
 
+=======
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* =====================================
+   SEO CONTENT SECTION
+===================================== */
+
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 .fastest-content {
   margin-bottom: 60px;
 }
 
+<<<<<<< HEAD
 .fastest-content h1, .fastest-content h2 {
   color: var(--text-primary, #f8fafc);
 }
@@ -35,14 +52,59 @@
   border-radius: 16px;
   border: 1px solid rgba(148, 163, 184, 0.2);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+=======
+.fastest-content h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.fastest-content h2 {
+  font-size: 22px;
+  margin-top: 35px;
+  margin-bottom: 12px;
+}
+
+.fastest-content p {
+  font-size: 15.5px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.fastest-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.fastest-content li {
+  margin-bottom: 8px;
+}
+
+/* =====================================
+   GAME CONTAINER
+===================================== */
+
+.fastest-container {
+  background: #f8f9fb;
+  padding: 40px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   text-align: center;
   margin-bottom: 60px;
 }
 
+<<<<<<< HEAD
+=======
+/* =====================================
+   START BOX
+===================================== */
+
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 .start-box {
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
   gap: 16px;
 }
 
@@ -81,25 +143,77 @@
   transform: translateY(-1px);
 }
 
+=======
+  gap: 15px;
+}
+
+.start-box input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.start-box button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.start-box button:hover {
+  background-color: #357abd;
+}
+
+/* =====================================
+   GAME HEADER
+===================================== */
+
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 .game-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
   font-weight: 600;
   font-size: 16px;
+<<<<<<< HEAD
   color: var(--text-muted, #94a3b8);
   flex-wrap: wrap;
   gap: 8px;
 }
 
 .game-header h3 { margin: 0; }
+=======
+}
+
+.game-header h3 {
+  margin: 0;
+}
+
+/* =====================================
+   QUESTION BOX
+===================================== */
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 
 .question-box h2 {
   font-size: 20px;
   margin-bottom: 20px;
+<<<<<<< HEAD
   color: var(--text-primary, #f8fafc);
 }
 
+=======
+}
+
+/* =====================================
+   OPTIONS
+===================================== */
+
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 .options {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -107,6 +221,7 @@
 }
 
 .option-btn {
+<<<<<<< HEAD
   padding: 14px;
   border-radius: 10px;
   border: 2px solid rgba(148, 163, 184, 0.3);
@@ -152,10 +267,67 @@
 
 .result-box {
   padding: 24px;
+=======
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 14.5px;
+}
+
+.option-btn:hover {
+  background-color: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}
+
+/* Correct & Wrong States */
+
+.option-btn.correct {
+  background-color: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.option-btn.wrong {
+  background-color: #d9534f;
+  color: white;
+  border-color: #d9534f;
+}
+
+/* =====================================
+   NEXT BUTTON
+===================================== */
+
+.next-btn {
+  margin-top: 20px;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.next-btn:hover {
+  background-color: #357abd;
+}
+
+/* =====================================
+   RESULT BOX
+===================================== */
+
+.result-box {
+  padding: 20px;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .result-box h2 {
   margin-bottom: 15px;
+<<<<<<< HEAD
   color: var(--text-primary, #f8fafc);
 }
 
@@ -171,24 +343,55 @@
 
 .result-box button:hover {
   background: var(--accent-hover, #0f766e);
+=======
+}
+
+.result-box button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.result-box button:hover {
+  background-color: #357abd;
+}
+
+/* =====================================
+   FAQ SECTION
+===================================== */
+
+.fastest-faq {
+  margin-top: 40px;
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .fastest-faq h2 {
   font-size: 22px;
   margin-bottom: 20px;
+<<<<<<< HEAD
   color: var(--text-primary, #f8fafc);
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .fastest-faq h3 {
   font-size: 16px;
   margin-top: 18px;
   margin-bottom: 6px;
+<<<<<<< HEAD
   color: var(--text-primary, #f8fafc);
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }
 
 .fastest-faq p {
   font-size: 15px;
   margin-bottom: 12px;
+<<<<<<< HEAD
   color: var(--text-muted, #94a3b8);
 }
 
@@ -202,4 +405,41 @@
   .fastest-page { padding: 30px 15px; }
   .fastest-content h1 { font-size: 24px; }
   .fastest-content h2 { font-size: 18px; }
+=======
+  color: #555;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+  .game-header {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .options {
+    grid-template-columns: 1fr;
+  }
+
+  .fastest-container {
+    padding: 30px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fastest-page {
+    padding: 30px 15px;
+  }
+
+  .fastest-content h1 {
+    font-size: 24px;
+  }
+
+  .fastest-content h2 {
+    font-size: 18px;
+  }
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 }

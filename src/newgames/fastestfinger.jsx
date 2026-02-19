@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+<<<<<<< HEAD
 import { Helmet } from "react-helmet";
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 import "../css/FastestFinger.css";
 
 const questionsData = [
@@ -86,6 +89,7 @@ const FastestFinger = () => {
   return (
     <div className="fastest-page">
 
+<<<<<<< HEAD
       {/* ================= SEO META SECTION ================= */}
       <Helmet>
         <title>Fastest Finger First Quiz Game – Speed Challenge</title>
@@ -99,6 +103,8 @@ const FastestFinger = () => {
         />
       </Helmet>
 
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
       {/* ================= SEO CONTENT SECTION ================= */}
       <section className="fastest-content">
         <h1>⚡ Fastest Finger First Quiz Game</h1>

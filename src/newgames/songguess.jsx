@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import { Helmet } from "react-helmet";
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 import "../css/SongGuess.css";
 
 const SongGuess = () => {
@@ -48,6 +51,7 @@ const SongGuess = () => {
   return (
     <div className="songguess-page">
 
+<<<<<<< HEAD
       {/* ================= SEO META ================= */}
       <Helmet>
         <title>Song Guess Game – Guess Songs from Lyrics</title>
@@ -61,6 +65,8 @@ const SongGuess = () => {
         />
       </Helmet>
 
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
       {/* ================= SEO CONTENT ================= */}
       <section className="songguess-content">
         <h1>Song Guess Game – Guess the Song from Lyrics</h1>

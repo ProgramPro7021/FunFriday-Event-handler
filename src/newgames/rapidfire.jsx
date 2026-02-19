@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { motion } from "framer-motion";
+<<<<<<< HEAD
 import { useTeam } from "../context/TeamContext";
 import TeamTurnBanner from "../components/TeamTurnBanner";
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 import "../css/Rapidfire.css";
 
 const questions = [
@@ -29,7 +32,10 @@ const questions = [
 ];
 
 const RapidFire = () => {
+<<<<<<< HEAD
   const { hasTeams, nextTurn } = useTeam();
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   const [current, setCurrent] = useState(0);
   const [score, setScore] = useState(0);
   const [time, setTime] = useState(30);
@@ -61,11 +67,14 @@ const RapidFire = () => {
     setTime(30);
   };
 
+<<<<<<< HEAD
   const handlePlayAgain = () => {
     if (hasTeams) nextTurn();
     startGame();
   };
 
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
   const handleAnswer = (option) => {
     if (option === questions[current].answer) {
       setScore((prev) => prev + 1);
@@ -154,8 +163,11 @@ const RapidFire = () => {
 
       <div className="rapidfire-game">
 
+<<<<<<< HEAD
         <TeamTurnBanner showNextButton={false} />
 
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
         {!isPlaying && !gameOver && (
           <button className="start-btn" onClick={startGame}>
             Start Game
@@ -192,7 +204,11 @@ const RapidFire = () => {
           <div className="game-over">
             <h2>Game Over 🎉</h2>
             <p>Your Final Score: {score}</p>
+<<<<<<< HEAD
             <button onClick={handlePlayAgain}>Play Again</button>
+=======
+            <button onClick={startGame}>Play Again</button>
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
           </div>
         )}
 

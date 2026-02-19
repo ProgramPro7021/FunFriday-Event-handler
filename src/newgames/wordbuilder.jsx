@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
+<<<<<<< HEAD
 import { Helmet } from "react-helmet";
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
 import "../css/WordBuilder.css";
 
 const words = [
@@ -88,6 +91,7 @@ const WordBuilder = () => {
   return (
     <div className="wordbuilder-page">
 
+<<<<<<< HEAD
       {/* ================= SEO META ================= */}
       <Helmet>
         <title>Word Builder Game – Unscramble Words Fast</title>
@@ -101,6 +105,8 @@ const WordBuilder = () => {
         />
       </Helmet>
 
+=======
+>>>>>>> e17c8d87192d2bfcb7a22dd5d9d9377cfb68a09e
       {/* ================= SEO CONTENT ================= */}
       <section className="wordbuilder-content">
         <h1>🧩 Word Builder Game – Unscramble the Word</h1>
