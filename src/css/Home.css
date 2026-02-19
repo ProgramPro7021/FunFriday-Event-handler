@@ -2,18 +2,16 @@
 
 .home {
   font-family: 'Inter', sans-serif;
-  color: #111827;
+  color: #1f2937;
   line-height: 1.7;
 }
 
 /* Section spacing */
 section {
   padding: 100px 20px;
-}
-
-section:not(.hero):not(.cta) {
-  max-width: 1100px;
-  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
 }
 
 /* Reusable Section Header */
@@ -27,14 +25,14 @@ section:not(.hero):not(.cta) {
   font-size: 38px;
   font-weight: 800;
   margin-bottom: 15px;
-  background: linear-gradient(90deg, #7c3aed, #2563eb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #020617;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
 }
 
 .section-header p {
-  color: #6b7280;
+  color: #374151;
   font-size: 16px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= HERO ================= */
@@ -49,17 +47,21 @@ section:not(.hero):not(.cta) {
   font-size: 52px;
   font-weight: 800;
   margin-bottom: 25px;
+  color: #020617;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .hero h1 span {
   color: #7c3aed;
+  text-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
 }
 
 .hero p {
   font-size: 18px;
-  color: #6b7280;
+  color: #374151;
   max-width: 700px;
   margin: 0 auto 35px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero-buttons {
@@ -96,12 +98,23 @@ section:not(.hero):not(.cta) {
   background: #e5e7eb;
 }
 
+.hero-buttons .secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: #1f2937;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero-buttons .secondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 .hero-badges {
   display: flex;
   justify-content: center;
   gap: 20px;
   font-size: 14px;
-  color: #6b7280;
+  color: #374151;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   flex-wrap: wrap;
 }
 
@@ -114,9 +127,10 @@ section:not(.hero):not(.cta) {
 
 .education-content p {
   font-size: 17px;
-  color: #4b5563;
+  color: #1f2937;
   margin-bottom: 20px;
   text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= ABOUT ================= */
@@ -125,7 +139,8 @@ section:not(.hero):not(.cta) {
   max-width: 750px;
   margin: 0 auto 50px;
   text-align: center;
-  color: #6b7280;
+  color: #374151;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .about-boxes {
@@ -153,8 +168,9 @@ section:not(.hero):not(.cta) {
 }
 
 .about-box p {
-  color: #6b7280;
+  color: #374151;
   font-size: 15px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= FEATURES ================= */
@@ -182,7 +198,8 @@ section:not(.hero):not(.cta) {
 }
 
 .feature-card p {
-  color: #6b7280;
+  color: #374151;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= GUIDE ================= */
@@ -199,8 +216,9 @@ section:not(.hero):not(.cta) {
 }
 
 .guide-content p {
-  color: #4b5563;
+  color: #1f2937;
   margin-bottom: 20px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= POPULAR ================= */
@@ -231,8 +249,9 @@ section:not(.hero):not(.cta) {
 
 .game-card p {
   font-size: 14px;
-  color: #6b7280;
+  color: #374151;
   margin-bottom: 15px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .game-card button {
@@ -271,19 +290,22 @@ section:not(.hero):not(.cta) {
 }
 
 .homepage-intro p {
-  color: #6b7280;
+  color: #374151;
   margin-bottom: 20px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .homepage-intro ul {
   margin: 20px auto;
   max-width: 500px;
   text-align: left;
-  color: #4b5563;
+  color: #1f2937;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .homepage-intro li {
   margin-bottom: 10px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= FAQ ================= */
@@ -300,8 +322,9 @@ section:not(.hero):not(.cta) {
 }
 
 .faq-content p {
-  color: #6b7280;
+  color: #374151;
   margin-bottom: 20px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= CTA ================= */
@@ -323,8 +346,9 @@ section:not(.hero):not(.cta) {
 }
 
 .cta p {
-  color: #6b7280;
+  color: #374151;
   margin-bottom: 35px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .cta-buttons {
@@ -408,4 +432,3 @@ section:not(.hero):not(.cta) {
     font-size: 24px;
   }
 
-}

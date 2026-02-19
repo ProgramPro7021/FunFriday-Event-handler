@@ -8,7 +8,8 @@
   padding: 60px 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
-  color: #222;
+  color: #1f2937;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* ===================================
@@ -23,7 +24,8 @@
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #111;
+  color: #020617;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
 }
 
 .rapidfire-content h2 {
@@ -31,7 +33,8 @@
   margin-top: 40px;
   margin-bottom: 15px;
   font-weight: 600;
-  color: #333;
+  color: #1f2937;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .rapidfire-content h3 {
@@ -44,7 +47,8 @@
 .rapidfire-content p {
   margin-bottom: 16px;
   font-size: 15.5px;
-  color: #444;
+  color: #374151;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .rapidfire-content ul {

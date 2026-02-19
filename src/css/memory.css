@@ -8,7 +8,8 @@
   padding: 40px 20px;
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #222;
+  color: #1f2937;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .memory-container h1 {

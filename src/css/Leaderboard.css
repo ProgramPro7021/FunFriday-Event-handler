@@ -2,8 +2,9 @@
 
 .leaderboard-page {
   font-family: 'Inter', sans-serif;
-  color: #111827;
+  color: #1f2937;
   padding-bottom: 60px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= HEADER ================= */
@@ -47,7 +48,9 @@
 .filter-section h2 {
   font-size: 22px;
   margin-bottom: 20px;
-  color: #111827;
+  color: #1f2937;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
 }
 
 .game-filters {
@@ -124,7 +127,8 @@
 
 .player {
   font-weight: 600;
-  color: #111827;
+  color: #1f2937;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .score {
@@ -134,8 +138,9 @@
 }
 
 .game {
-  color: #6b7280;
+  color: #374151;
   font-size: 14px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 /* ================= LOADING & EMPTY ================= */
@@ -144,8 +149,9 @@
 .empty-state {
   text-align: center;
   padding: 60px 20px;
-  color: #6b7280;
+  color: #374151;
   font-size: 16px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= INFO SECTION ================= */
@@ -161,7 +167,8 @@
 .leaderboard-info h2 {
   font-size: 26px;
   margin-bottom: 20px;
-  color: #111827;
+  color: #1f2937;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .leaderboard-info ul {
@@ -173,8 +180,9 @@
   padding: 12px 0;
   padding-left: 32px;
   position: relative;
-  color: #6b7280;
+  color: #374151;
   font-size: 16px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .leaderboard-info li::before {

@@ -5,8 +5,9 @@
   margin: 60px auto;
   padding: 40px 24px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #2c3e50;
+  color: #1f2937;
   line-height: 1.75;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 /* ===== Hero Section ===== */
@@ -57,9 +58,10 @@
 .about-page h2 {
   font-size: 2rem;
   margin-bottom: 25px;
-  color: #34495e;
+  color: #374151;
   position: relative;
   padding-bottom: 10px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .about-page h2::after {
