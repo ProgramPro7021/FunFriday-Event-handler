@@ -1,0 +1,77 @@
+/* ==================================================
+   RESET & BASE
+================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f8fafc;
+  background-image: url("./assets/patt.png");
+  background-size: cover;
+  background-attachment: fixed;
+  color: #111827;
+}
+
+/* ==================================================
+   ROOT LAYOUT
+================================================== */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area (navbar-safe) */
+main {
+  flex: 1;
+  width: 100%;
+  padding: 120px 24px 48px; /* space below navbar */
+}
+
+/* ==================================================
+   GLOBAL TYPOGRAPHY
+================================================== */
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+p {
+  margin: 0;
+  color: #6b7280;
+}
+
+/* ==================================================
+   UTILITIES
+================================================== */
+.text-center { text-align: center; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+.mt-4 { margin-top: 32px; }
+
+/* ==================================================
+   SCROLLBAR
+================================================== */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track { background: transparent; }
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 768px) {
+  main { padding: 110px 16px 32px; }
+}

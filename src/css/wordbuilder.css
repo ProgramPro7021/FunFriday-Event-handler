@@ -1,0 +1,236 @@
+/* =====================================
+   PAGE WRAPPER
+===================================== */
+
+.wordbuilder-page {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* =====================================
+   SEO CONTENT SECTION
+===================================== */
+
+.wordbuilder-content {
+  margin-bottom: 60px;
+}
+
+.wordbuilder-content h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.wordbuilder-content h2 {
+  font-size: 22px;
+  margin-top: 35px;
+  margin-bottom: 12px;
+}
+
+.wordbuilder-content p {
+  font-size: 15.5px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.wordbuilder-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.wordbuilder-content li {
+  margin-bottom: 8px;
+}
+
+/* =====================================
+   GAME CONTAINER
+===================================== */
+
+.wordbuilder-container {
+  background: #f8f9fb;
+  padding: 40px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* =====================================
+   START BUTTON
+===================================== */
+
+.start-btn {
+  padding: 12px 26px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #357abd;
+}
+
+/* =====================================
+   GAME HEADER
+===================================== */
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* =====================================
+   SCRAMBLED WORD
+===================================== */
+
+.scrambled {
+  font-size: 28px;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #4a90e2;
+}
+
+/* =====================================
+   FORM
+===================================== */
+
+.wordbuilder-container form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.wordbuilder-container input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.wordbuilder-container button[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.wordbuilder-container button[type="submit"]:hover {
+  background-color: #357abd;
+}
+
+/* =====================================
+   MESSAGE
+===================================== */
+
+.message {
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* =====================================
+   RESULT BOX
+===================================== */
+
+.result-box {
+  padding: 20px;
+}
+
+.result-box h2 {
+  margin-bottom: 12px;
+}
+
+.result-box button {
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.result-box button:hover {
+  background-color: #357abd;
+}
+
+/* =====================================
+   FAQ SECTION
+===================================== */
+
+.wordbuilder-faq {
+  margin-top: 40px;
+}
+
+.wordbuilder-faq h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.wordbuilder-faq h3 {
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+.wordbuilder-faq p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+  .game-header {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .scrambled {
+    font-size: 22px;
+    letter-spacing: 4px;
+  }
+
+  .wordbuilder-container {
+    padding: 30px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wordbuilder-page {
+    padding: 30px 15px;
+  }
+
+  .wordbuilder-content h1 {
+    font-size: 24px;
+  }
+
+  .wordbuilder-content h2 {
+    font-size: 18px;
+  }
+
+  .wordbuilder-container input {
+    width: 100%;
+  }
+}

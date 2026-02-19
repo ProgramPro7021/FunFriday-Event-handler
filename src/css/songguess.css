@@ -1,0 +1,235 @@
+/* ======================================
+   PAGE WRAPPER
+====================================== */
+
+.songguess-page {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* ======================================
+   SEO CONTENT SECTION
+====================================== */
+
+.songguess-content {
+  margin-bottom: 60px;
+}
+
+.songguess-content h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.songguess-content h2 {
+  font-size: 22px;
+  margin-top: 35px;
+  margin-bottom: 12px;
+}
+
+.songguess-content p {
+  font-size: 15.5px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.songguess-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.songguess-content li {
+  margin-bottom: 8px;
+}
+
+/* ======================================
+   GAME CONTAINER
+====================================== */
+
+.songguess-container {
+  background: #f8f9fb;
+  padding: 40px 25px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* ======================================
+   START BUTTON
+====================================== */
+
+.start-btn {
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff5a5f;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #e0484d;
+}
+
+/* ======================================
+   GAME HEADER
+====================================== */
+
+.game-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* ======================================
+   HINT TEXT
+====================================== */
+
+.hint {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #ff5a5f;
+}
+
+/* ======================================
+   FORM
+====================================== */
+
+.songguess-container form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.songguess-container input {
+  padding: 10px 12px;
+  width: 260px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.songguess-container input:focus {
+  border-color: #ff5a5f;
+}
+
+.songguess-container button[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff5a5f;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.songguess-container button[type="submit"]:hover {
+  background-color: #e0484d;
+}
+
+/* ======================================
+   MESSAGE FEEDBACK
+====================================== */
+
+.message {
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 15px;
+  min-height: 22px;
+}
+
+/* ======================================
+   RESULT BOX
+====================================== */
+
+.result-box {
+  padding: 20px;
+}
+
+.result-box h2 {
+  margin-bottom: 12px;
+}
+
+.result-box button {
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  background-color: #ff5a5f;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.result-box button:hover {
+  background-color: #e0484d;
+}
+
+/* ======================================
+   FAQ SECTION
+====================================== */
+
+.songguess-faq {
+  margin-top: 40px;
+}
+
+.songguess-faq h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.songguess-faq h3 {
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+}
+
+.songguess-faq p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media (max-width: 768px) {
+  .songguess-container {
+    padding: 30px 18px;
+  }
+
+  .hint {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .songguess-page {
+    padding: 30px 15px;
+  }
+
+  .songguess-content h1 {
+    font-size: 24px;
+  }
+
+  .songguess-content h2 {
+    font-size: 18px;
+  }
+
+  .songguess-container input {
+    width: 100%;
+  }
+}

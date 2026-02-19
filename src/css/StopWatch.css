@@ -1,0 +1,229 @@
+/* ===============================
+   PAGE BACKGROUND
+================================= */
+.stopwatch-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  color: #ffffff;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  padding: 40px 20px;
+}
+
+/* ===============================
+   SEO SECTION
+================================= */
+.stopwatch-seo {
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+.stopwatch-seo h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.stopwatch-seo h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.stopwatch-seo p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.stopwatch-seo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.stopwatch-seo li {
+  margin: 8px 0;
+  color: #94a3b8;
+}
+
+/* ===============================
+   STOPWATCH CONTAINER
+================================= */
+.stopwatch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stopwatch-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stopwatch-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===============================
+   TIME DISPLAY
+================================= */
+.stopwatch-time-display {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+.stopwatch-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.stopwatch-btn {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  min-width: 90px;
+}
+
+.stopwatch-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Individual Button Colors */
+.stopwatch-btn.start {
+  background: #22c55e;
+  color: #fff;
+}
+
+.stopwatch-btn.pause {
+  background: #f59e0b;
+  color: #fff;
+}
+
+.stopwatch-btn.lap {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.stopwatch-btn.reset {
+  background: #ef4444;
+  color: #fff;
+}
+
+/* Hover Effects */
+.stopwatch-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.stopwatch-btn:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+/* ===============================
+   LAPS SECTION
+================================= */
+.laps-section {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.laps-section h3 {
+  margin-bottom: 10px;
+}
+
+.laps-section ul {
+  list-style: none;
+  padding: 0;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.laps-section li {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.clear-laps {
+  margin-top: 10px;
+  background: #64748b;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.clear-laps:hover {
+  background: #475569;
+}
+
+/* ===============================
+   FAQ SECTION
+================================= */
+.stopwatch-faq {
+  max-width: 800px;
+  margin: 60px auto 0 auto;
+  color: #cbd5e1;
+}
+
+.stopwatch-faq h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.stopwatch-faq h3 {
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+/* ===============================
+   SCROLLBAR
+================================= */
+.laps-section ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.laps-section ul::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+@media (max-width: 480px) {
+  .stopwatch-card {
+    padding: 25px;
+  }
+
+  .stopwatch-time-display {
+    font-size: 2.2rem;
+  }
+
+  .stopwatch-btn {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+}

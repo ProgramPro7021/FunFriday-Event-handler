@@ -1,0 +1,232 @@
+/* ===================================
+   MAIN WRAPPER
+=================================== */
+
+.rapidfire {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #222;
+}
+
+/* ===================================
+   CONTENT SECTION (SEO AREA)
+=================================== */
+
+.rapidfire-content {
+  margin-bottom: 60px;
+}
+
+.rapidfire-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.rapidfire-content h2 {
+  font-size: 22px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.rapidfire-content h3 {
+  font-size: 17px;
+  margin-top: 25px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.rapidfire-content p {
+  margin-bottom: 16px;
+  font-size: 15.5px;
+  color: #444;
+}
+
+.rapidfire-content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.rapidfire-content li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* ===================================
+   GAME SECTION
+=================================== */
+
+.rapidfire-game {
+  background: #f8f9fb;
+  padding: 40px 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 60px;
+}
+
+/* Start Button */
+.start-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #4a90e2;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.start-btn:hover {
+  background-color: #357abd;
+}
+
+/* ===================================
+   GAME BOX
+=================================== */
+
+.game-box {
+  margin-top: 20px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.top-bar span:first-child {
+  color: #d9534f; /* Timer */
+}
+
+.top-bar span:last-child {
+  color: #28a745; /* Score */
+}
+
+.game-box h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* ===================================
+   OPTIONS BUTTONS
+=================================== */
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.options button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 14.5px;
+}
+
+.options button:hover {
+  background-color: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}
+
+/* ===================================
+   GAME OVER SECTION
+=================================== */
+
+.game-over {
+  margin-top: 20px;
+}
+
+.game-over h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.game-over p {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.game-over button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.game-over button:hover {
+  background-color: #357abd;
+}
+
+/* ===================================
+   FAQ SECTION
+=================================== */
+
+.rapidfire-faq {
+  margin-top: 40px;
+}
+
+.rapidfire-faq h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.rapidfire-faq h3 {
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.rapidfire-faq p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+@media (max-width: 768px) {
+  .rapidfire {
+    padding: 40px 15px;
+  }
+
+  .rapidfire-content h1 {
+    font-size: 26px;
+  }
+
+  .rapidfire-content h2 {
+    font-size: 19px;
+  }
+
+  .options {
+    grid-template-columns: 1fr;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .rapidfire-game {
+    padding: 30px 18px;
+  }
+}
