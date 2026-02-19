@@ -4,7 +4,6 @@
   font-family: 'Inter', sans-serif;
   color: #1f2937;
   padding-bottom: 60px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= HEADER ================= */
@@ -24,11 +23,13 @@
   font-size: 48px;
   font-weight: 800;
   margin-bottom: 15px;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 .leaderboard-header p {
   font-size: 18px;
   opacity: 0.95;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ================= CONTAINER ================= */
@@ -48,8 +49,8 @@
 .filter-section h2 {
   font-size: 22px;
   margin-bottom: 20px;
-  color: #1f2937;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
 }
 }
 
@@ -84,10 +85,10 @@
 /* ================= TABLE ================= */
 
 .leaderboard-table {
-  background: white;
-  border-radius: 12px;
+  background: #ffffff;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .table-header {

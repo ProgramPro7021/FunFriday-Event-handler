@@ -25,14 +25,14 @@ section {
   font-size: 38px;
   font-weight: 800;
   margin-bottom: 15px;
-  color: #020617;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 .section-header p {
-  color: #374151;
+  color: #e8ecf1;
   font-size: 16px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ================= HERO ================= */
@@ -47,21 +47,21 @@ section {
   font-size: 52px;
   font-weight: 800;
   margin-bottom: 25px;
-  color: #020617;
-  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 .hero h1 span {
-  color: #7c3aed;
-  text-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+  color: #ffff00;
+  text-shadow: 0 3px 15px rgba(255, 255, 0, 0.4);
 }
 
 .hero p {
   font-size: 18px;
-  color: #374151;
+  color: #f0f4f8;
   max-width: 700px;
   margin: 0 auto 35px;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 .hero-buttons {
@@ -99,13 +99,10 @@ section {
 }
 
 .hero-buttons .secondary {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.9);
   color: #1f2937;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.hero-buttons .secondary:hover {
-  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  font-weight: 600;
 }
 
 .hero-badges {
@@ -113,8 +110,8 @@ section {
   justify-content: center;
   gap: 20px;
   font-size: 14px;
-  color: #374151;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #e8ecf1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   flex-wrap: wrap;
 }
 
@@ -139,8 +136,7 @@ section {
   max-width: 750px;
   margin: 0 auto 50px;
   text-align: center;
-  color: #374151;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #1f2937;
 }
 
 .about-boxes {
@@ -154,13 +150,14 @@ section {
   width: 280px;
   padding: 30px;
   border-radius: 16px;
-  background: #f9fafb;
+  background: #ffffff;
   transition: 0.3s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 .about-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
 .about-box h3 {
@@ -168,9 +165,8 @@ section {
 }
 
 .about-box p {
-  color: #374151;
+  color: #1f2937;
   font-size: 15px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= FEATURES ================= */
@@ -182,24 +178,25 @@ section {
 }
 
 .feature-card {
-  background: white;
+  background: #ffffff;
   padding: 30px;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
 .feature-card h3 {
   margin-bottom: 10px;
+  color: #1f2937;
 }
 
 .feature-card p {
   color: #374151;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= GUIDE ================= */
@@ -234,24 +231,25 @@ section {
   width: 280px;
   padding: 25px;
   border-radius: 16px;
-  background: #f9fafb;
+  background: #ffffff;
   transition: 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .game-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
 .game-card h3 {
   margin-bottom: 10px;
+  color: #1f2937;
 }
 
 .game-card p {
   font-size: 14px;
   color: #374151;
   margin-bottom: 15px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .game-card button {
