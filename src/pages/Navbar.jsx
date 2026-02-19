@@ -1,7 +1,10 @@
 import { NavLink } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext.jsx';
 import '../css/Navbar.css';
 
 const Navbar = () => {
+  const { user } = useAuth();
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -17,7 +20,7 @@ const Navbar = () => {
 
         {/* Navigation */}
         <div className="nav-links">
-    <NavLink to="/" end className="nav-link">
+          <NavLink to="/" end className="nav-link">
             👥 <span>Home</span>
           </NavLink>
 
@@ -31,6 +34,14 @@ const Navbar = () => {
 
           <NavLink to="/stop-watch" className="nav-link">
             ⏱️ <span>Stop Watch</span>
+          </NavLink>
+
+          <NavLink to="/leaderboard" className="nav-link">
+            🏆 <span>Leaderboard</span>
+          </NavLink>
+
+          <NavLink to="/auth" className="nav-link auth-link">
+            {user ? '👤 Account' : '🔐 Sign In'}
           </NavLink>
         </div>
 
