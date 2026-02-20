@@ -21,7 +21,7 @@ const Navbar = () => {
         {/* Navigation */}
         <div className="nav-links">
           <NavLink to="/" end className="nav-link">
-            👥 <span>Home</span>
+            🏠 <span>Home</span>
           </NavLink>
 
           <NavLink to="/SplitTeam" end className="nav-link">

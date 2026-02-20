@@ -25,14 +25,12 @@ section {
   font-size: 38px;
   font-weight: 800;
   margin-bottom: 15px;
-  color: #ffffff;
-  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  color: #1f2937;
 }
 
 .section-header p {
-  color: #e8ecf1;
+  color: #374151;
   font-size: 16px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ================= HERO ================= */
@@ -47,21 +45,18 @@ section {
   font-size: 52px;
   font-weight: 800;
   margin-bottom: 25px;
-  color: #ffffff;
-  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  color: #1f2937;
 }
 
 .hero h1 span {
-  color: #ffff00;
-  text-shadow: 0 3px 15px rgba(255, 255, 0, 0.4);
+  color: #7c3aed;
 }
 
 .hero p {
   font-size: 18px;
-  color: #f0f4f8;
+  color: #374151;
   max-width: 700px;
   margin: 0 auto 35px;
-  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
 }
 
 .hero-buttons {
