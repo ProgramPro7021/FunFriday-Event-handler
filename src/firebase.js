@@ -13,22 +13,21 @@ const requiredVars = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
-const missing = Object.entries(requiredVars).filter(([, v]) => !v).map(([k]) => k);
-if (missing.length) {
-  throw new Error(
-    `Missing Firebase env vars: ${missing.join(", ")}. Add them to a local .env file or set environment variables (see FIREBASE_SETUP.md).`
-  );
-}
+export const missingFirebaseVars = Object.entries(requiredVars)
+  .filter(([, v]) => !v)
+  .map(([k]) => k);
+
+export const firebaseEnabled = missingFirebaseVars.length === 0;
 
 const firebaseConfig = { ...requiredVars };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = firebaseEnabled ? initializeApp(firebaseConfig) : null;
 
 // Initialize Firebase Authentication and get a reference to the service
-export const auth = getAuth(app);
+export const auth = app ? getAuth(app) : null;
 
 // Initialize Cloud Firestore and get a reference to the service
-export const db = getFirestore(app);
+export const db = app ? getFirestore(app) : null;
 
 export default app;

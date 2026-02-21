@@ -17,7 +17,7 @@ import {
   limit,
   Timestamp,
 } from "firebase/firestore";
-import { auth, db } from "../firebase";
+import { auth, db, firebaseEnabled, missingFirebaseVars } from "../firebase";
 
 const AuthContext = createContext();
 
@@ -28,6 +28,14 @@ export const AuthProvider = ({ children }) => {
 
   // Monitor auth state
   useEffect(() => {
+    if (!firebaseEnabled || !auth) {
+      console.warn(
+        `Firebase disabled. Missing env vars: ${missingFirebaseVars.join(", ")}`
+      );
+      setLoading(false);
+      return () => {};
+    }
+
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       if (currentUser) {
@@ -41,9 +49,12 @@ export const AuthProvider = ({ children }) => {
 
   // Fetch user statistics
   const fetchUserStats = async (userId) => {
+    if (!firebaseEnabled || !db) {
+      return;
+    }
+
     try {
-      const scoresRef = collection(db, "scores");
-      const q = query(where("userId", "==", userId));
+      const q = query(collection(db, "scores"), where("userId", "==", userId));
       const snapshot = await getDocs(q);
 
       let totalScore = 0;
@@ -70,6 +81,10 @@ export const AuthProvider = ({ children }) => {
 
   // Google Sign In
   const signInWithGoogle = async () => {
+    if (!firebaseEnabled || !auth) {
+      throw new Error("Authentication is unavailable until Firebase is configured.");
+    }
+
     try {
       const provider = new GoogleAuthProvider();
       const result = await signInWithPopup(auth, provider);
@@ -82,6 +97,10 @@ export const AuthProvider = ({ children }) => {
 
   // Email/Password Sign Up
   const signUpWithEmail = async (email, password) => {
+    if (!firebaseEnabled || !auth) {
+      throw new Error("Authentication is unavailable until Firebase is configured.");
+    }
+
     try {
       const result = await createUserWithEmailAndPassword(auth, email, password);
       return result.user;
@@ -93,6 +112,10 @@ export const AuthProvider = ({ children }) => {
 
   // Email/Password Sign In
   const signInWithEmail = async (email, password) => {
+    if (!firebaseEnabled || !auth) {
+      throw new Error("Authentication is unavailable until Firebase is configured.");
+    }
+
     try {
       const result = await signInWithEmailAndPassword(auth, email, password);
       return result.user;
@@ -104,6 +127,11 @@ export const AuthProvider = ({ children }) => {
 
   // Sign Out
   const logout = async () => {
+    if (!firebaseEnabled || !auth) {
+      setUserStats(null);
+      return;
+    }
+
     try {
       await signOut(auth);
       setUserStats(null);
@@ -115,6 +143,10 @@ export const AuthProvider = ({ children }) => {
 
   // Submit Score
   const submitScore = async (gameType, score, playerName) => {
+    if (!firebaseEnabled || !db) {
+      return false;
+    }
+
     if (!user) {
       console.error("User not authenticated");
       return false;
@@ -141,6 +173,10 @@ export const AuthProvider = ({ children }) => {
 
   // Get Leaderboard
   const getLeaderboard = async (gameType = null, limit_count = 100) => {
+    if (!firebaseEnabled || !db) {
+      return [];
+    }
+
     try {
       let q;
       if (gameType) {
